@@ -541,7 +541,7 @@ func _estimate_body_forward_dir() -> Vector3:
 		var dot = forward.dot(hands_forward)
 		var cross = forward.cross(hands_forward).normalized()
 		var angle = clamp(acos(dot) * body_forward_mix, 0.0, 0.33 * PI)
-		forward = forward.rotated(cross, angle)
+		forward = forward.rotated(cross.normalized(), angle)
 
 	return forward
 
@@ -644,7 +644,7 @@ func _update_body_under_camera(delta : float):
 	curr_transform.origin += up_player * (player_head_height - player_height)
 
 	# The camera/eyes are towards the front of the body, so move the body back slightly
-	var forward_dir := _estimate_body_forward_dir()
+	var forward_dir := _estimate_body_forward_dir().normalized()
 	if forward_dir.length() > 0.01:
 		curr_transform = curr_transform.looking_at(curr_transform.origin + forward_dir, up_player)
 		curr_transform.origin -= forward_dir.normalized() * eye_forward_offset * player_radius

@@ -1,11 +1,15 @@
-[gd_scene load_steps=295 format=4 uid="uid://c6emy0isr77oa"]
+[gd_scene load_steps=299 format=4 uid="uid://c6emy0isr77oa"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_0drpd"]
 [ext_resource type="Script" uid="uid://bpmodm04r80w6" path="res://addons/godot-xr-tools/functions/movement_direct.gd" id="3_ktwt8"]
+[ext_resource type="Script" uid="uid://ciq6xarlvw2hj" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="3_ljivr"]
 [ext_resource type="Script" uid="uid://iyw6scisivrv" path="res://addons/godot-xr-tools/player/player_body.gd" id="4_fyqd8"]
 [ext_resource type="PackedScene" uid="uid://btvywip8praeh" path="res://VRaplinka.blend" id="5_6wh46"]
 [ext_resource type="Script" uid="uid://gkvcbgar2tv2" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="5_ov34o"]
-[ext_resource type="PackedScene" uid="uid://bwrdqavdl5joi" path="res://assets/models/axe.blend" id="6_ktwt8"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="6_w3u20"]
+[ext_resource type="PackedScene" uid="uid://boy2l5mst2yiw" path="res://addons/godot-xr-tools/objects/Objects/axe.tscn" id="9_ljivr"]
+[ext_resource type="PackedScene" uid="uid://cyn3u7t31c81u" path="res://addons/godot-xr-tools/objects/Objects/dummy.tscn" id="10_2v4hs"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="11_cv47w"]
 
 [sub_resource type="Resource" id="Resource_ljivr"]
 script = ExtResource("5_ov34o")
@@ -3692,6 +3696,18 @@ max_speed = 5.0
 strafe = true
 metadata/_custom_type_script = "uid://bpmodm04r80w6"
 
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/LeftHand" index="1"]
+script = ExtResource("3_ljivr")
+metadata/_custom_type_script = "uid://ciq6xarlvw2hj"
+
+[node name="LeftHand" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("6_w3u20")]
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/RightHand" index="0"]
+script = ExtResource("3_ljivr")
+metadata/_custom_type_script = "uid://ciq6xarlvw2hj"
+
+[node name="RightHand" parent="XROrigin3D/RightHand" index="1" instance=ExtResource("11_cv47w")]
+
 [node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D" index="3"]
 top_level = true
 script = ExtResource("4_fyqd8")
@@ -4484,5 +4500,8 @@ lifetime = 0.5
 process_material = SubResource("ParticleProcessMaterial_ov34o")
 draw_pass_1 = SubResource("SphereMesh_2v4hs")
 
-[node name="axe2" parent="." index="5" instance=ExtResource("6_ktwt8")]
-transform = Transform3D(-0.008993257, -0.14459488, -0.9894501, -0.99807143, 0.062076285, 0, 0.061421387, 0.98754185, -0.14487427, -2.9108365, 1.0370002, 8.561302)
+[node name="Axe" parent="." index="5" instance=ExtResource("9_ljivr")]
+transform = Transform3D(-0.09816036, -0.93462807, -0.34181097, -0.9915722, 0.06267312, 0.11338743, -0.08455271, 0.3500604, -0.93290323, -3.7525494, 1.0217893, 7.637997)
+
+[node name="Node3D" parent="." index="6" instance=ExtResource("10_2v4hs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.547969, 0.46015382, 13.060066)
