@@ -28,6 +28,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 [global_group]
 
 movement_providers=""
+player_body=""
 
 [layer_names]
 

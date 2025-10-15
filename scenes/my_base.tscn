@@ -1,0 +1,81 @@
+[gd_scene load_steps=16 format=3 uid="uid://c6emy0isr77oa"]
+
+[ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_2b7op"]
+[ext_resource type="Script" uid="uid://bpmodm04r80w6" path="res://addons/godot-xr-tools/functions/movement_direct.gd" id="2_wwvrp"]
+[ext_resource type="Script" uid="uid://ciq6xarlvw2hj" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="3_c4hl7"]
+[ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_6woui"]
+[ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="5_skk58"]
+[ext_resource type="PackedScene" uid="uid://xe8wd5yp6qqf" path="res://scenes/wrist_ui.tscn" id="5_wwvrp"]
+[ext_resource type="Script" uid="uid://iyw6scisivrv" path="res://addons/godot-xr-tools/player/player_body.gd" id="6_wmdd0"]
+[ext_resource type="Script" uid="uid://gkvcbgar2tv2" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="7_raqsb"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_skk58"]
+[ext_resource type="Material" path="res://addons/godot-xr-tools/materials/pointer.tres" id="8_skk58"]
+[ext_resource type="Material" path="res://addons/godot-xr-tools/materials/target.tres" id="9_wmdd0"]
+
+[sub_resource type="Resource" id="Resource_ljivr"]
+script = ExtResource("7_raqsb")
+metadata/_custom_type_script = "uid://gkvcbgar2tv2"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rvifb"]
+sky_top_color = Color(0.24006462, 0.6263312, 0.962735, 1)
+sky_horizon_color = Color(0.19060168, 0.72262657, 0.85307723, 1)
+sky_curve = 0.19118394
+
+[sub_resource type="Sky" id="Sky_3ov02"]
+sky_material = SubResource("ProceduralSkyMaterial_rvifb")
+
+[sub_resource type="Environment" id="Environment_6hthj"]
+background_mode = 2
+sky = SubResource("Sky_3ov02")
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.40940192, 0.729778, 0.77056164, 1)
+fog_light_energy = 1.5
+fog_density = 0.2
+fog_depth_curve = 2.3784142
+fog_depth_end = 30.0
+
+[node name="MyBase" instance=ExtResource("1_2b7op")]
+
+[node name="Walking" type="Node" parent="XROrigin3D/LeftHand" index="0" groups=["movement_providers"]]
+script = ExtResource("2_wwvrp")
+max_speed = 5.0
+strafe = true
+metadata/_custom_type_script = "uid://bpmodm04r80w6"
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/LeftHand" index="1"]
+script = ExtResource("3_c4hl7")
+metadata/_custom_type_script = "uid://ciq6xarlvw2hj"
+
+[node name="LeftHand" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("4_6woui")]
+
+[node name="Viewport2Din3D" parent="XROrigin3D/LeftHand" index="3" instance=ExtResource("5_wwvrp")]
+transform = Transform3D(-3.496911e-09, -0.08, -3.496911e-09, 0, -3.496911e-09, 0.08, -0.08, 3.496911e-09, 1.5285484e-16, -0.041925013, -0.0493623, 0.30986825)
+collision_layer = 5242880
+scene_properties_keys = PackedStringArray("wrist_control.gd")
+
+[node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/RightHand" index="0"]
+script = ExtResource("3_c4hl7")
+metadata/_custom_type_script = "uid://ciq6xarlvw2hj"
+
+[node name="RightHand" parent="XROrigin3D/RightHand" index="1" instance=ExtResource("5_skk58")]
+
+[node name="FunctionPointer" parent="XROrigin3D/RightHand" index="2" instance=ExtResource("7_skk58")]
+show_laser = 2
+laser_length = 1
+laser_material = ExtResource("8_skk58")
+show_target = true
+target_material = ExtResource("9_wmdd0")
+
+[node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D" index="3" groups=["player_body"]]
+top_level = true
+collision_layer = 524289
+script = ExtResource("6_wmdd0")
+physics = SubResource("Resource_ljivr")
+metadata/_custom_type_script = "uid://iyw6scisivrv"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
+transform = Transform3D(0.9569505, 0.2844989, -0.05749942, 0, 0.19810219, 0.98018134, 0.29025126, -0.937985, 0.18957399, 0, 17.404432, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
+environment = SubResource("Environment_6hthj")

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://btvywip8praeh"
-path="res://.godot/imported/VRaplinka.blend-6bb17325910386f1fef6b49c3e7d0b9a.scn"
+path="res://.godot/imported/VRaplinka.blend-f8bb59938cb7344002318c870fb462a5.scn"
 
 [deps]
 
-source_file="res://VRaplinka.blend"
-dest_files=["res://.godot/imported/VRaplinka.blend-6bb17325910386f1fef6b49c3e7d0b9a.scn"]
+source_file="res://assets/scenes/VRaplinka.blend"
+dest_files=["res://.godot/imported/VRaplinka.blend-f8bb59938cb7344002318c870fb462a5.scn"]
 
 [params]
 

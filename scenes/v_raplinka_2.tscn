@@ -1,16 +1,4 @@
-[gd_scene load_steps=286 format=4 uid="uid://c6emy0isr77oa"]
-
-[ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_0drpd"]
-[ext_resource type="Script" uid="uid://bpmodm04r80w6" path="res://addons/godot-xr-tools/functions/movement_direct.gd" id="3_ktwt8"]
-[ext_resource type="Script" uid="uid://iyw6scisivrv" path="res://addons/godot-xr-tools/player/player_body.gd" id="4_fyqd8"]
-[ext_resource type="PackedScene" uid="uid://btvywip8praeh" path="res://VRaplinka.blend" id="5_6wh46"]
-[ext_resource type="Script" uid="uid://gkvcbgar2tv2" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="5_ov34o"]
-[ext_resource type="PackedScene" uid="uid://bwrdqavdl5joi" path="res://assets/models/axe.blend" id="6_ktwt8"]
-[ext_resource type="PackedScene" uid="uid://ikydy4ndkx7b" path="res://assets/scenes/fireparticles.tscn" id="7_fyqd8"]
-
-[sub_resource type="Resource" id="Resource_ljivr"]
-script = ExtResource("5_ov34o")
-metadata/_custom_type_script = "uid://gkvcbgar2tv2"
+[gd_scene load_steps=275 format=4 uid="uid://btj2d3w2j3s52"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_03nix"]
 resource_name = "Material.003"
@@ -3627,814 +3615,766 @@ shadow_mesh = SubResource("ArrayMesh_kvxoi")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sfbhn"]
 data = PackedVector3Array(0, 0.0374, 0.0862, -0.0022, 0.0378, 0.1275, 0, 0.0374, 0.1275, 0, 0.0374, 0.0862, -0.0022, 0.0378, 0.0862, -0.0022, 0.0378, 0.1275, -0.0022, 0.0378, 0.0862, -0.0041, 0.0391, 0.1275, -0.0022, 0.0378, 0.1275, -0.0022, 0.0378, 0.0862, -0.0041, 0.0391, 0.0862, -0.0041, 0.0391, 0.1275, -0.0041, 0.0391, 0.0862, -0.0053, 0.0409, 0.1275, -0.0041, 0.0391, 0.1275, -0.0041, 0.0391, 0.0862, -0.0053, 0.0409, 0.0862, -0.0053, 0.0409, 0.1275, -0.0053, 0.0409, 0.0862, -0.0058, 0.0431, 0.1275, -0.0053, 0.0409, 0.1275, -0.0053, 0.0409, 0.0862, -0.0058, 0.0431, 0.0862, -0.0058, 0.0431, 0.1275, -0.0058, 0.0431, 0.0862, -0.0053, 0.0453, 0.1275, -0.0058, 0.0431, 0.1275, -0.0058, 0.0431, 0.0862, -0.0053, 0.0453, 0.0862, -0.0053, 0.0453, 0.1275, -0.0053, 0.0453, 0.0862, -0.0041, 0.047199998, 0.1275, -0.0053, 0.0453, 0.1275, -0.0053, 0.0453, 0.0862, -0.0041, 0.047199998, 0.0862, -0.0041, 0.047199998, 0.1275, -0.0041, 0.047199998, 0.0862, -0.0022, 0.048499998, 0.1275, -0.0041, 0.047199998, 0.1275, -0.0041, 0.047199998, 0.0862, -0.0022, 0.048499998, 0.0862, -0.0022, 0.048499998, 0.1275, -0.0022, 0.048499998, 0.0862, 0, 0.048899997, 0.1275, -0.0022, 0.048499998, 0.1275, -0.0022, 0.048499998, 0.0862, 0, 0.048899997, 0.0862, 0, 0.048899997, 0.1275, 0, 0.048899997, 0.0862, 0.0022, 0.048499998, 0.1275, 0, 0.048899997, 0.1275, 0, 0.048899997, 0.0862, 0.0022, 0.048499998, 0.0862, 0.0022, 0.048499998, 0.1275, 0.0022, 0.048499998, 0.0862, 0.0041, 0.047199998, 0.1275, 0.0022, 0.048499998, 0.1275, 0.0022, 0.048499998, 0.0862, 0.0041, 0.047199998, 0.0862, 0.0041, 0.047199998, 0.1275, 0.0041, 0.047199998, 0.0862, 0.0053, 0.0453, 0.1275, 0.0041, 0.047199998, 0.1275, 0.0041, 0.047199998, 0.0862, 0.0053, 0.0453, 0.0862, 0.0053, 0.0453, 0.1275, 0.0053, 0.0453, 0.0862, 0.0058, 0.0431, 0.1275, 0.0053, 0.0453, 0.1275, 0.0053, 0.0453, 0.0862, 0.0058, 0.0431, 0.0862, 0.0058, 0.0431, 0.1275, 0.0058, 0.0431, 0.0862, 0.0053, 0.0409, 0.1275, 0.0058, 0.0431, 0.1275, 0.0058, 0.0431, 0.0862, 0.0053, 0.0409, 0.0862, 0.0053, 0.0409, 0.1275, 0.0053, 0.0409, 0.0862, 0.0041, 0.0391, 0.1275, 0.0053, 0.0409, 0.1275, 0.0053, 0.0409, 0.0862, 0.0041, 0.0391, 0.0862, 0.0041, 0.0391, 0.1275, 0.0041, 0.0391, 0.0862, 0.0022, 0.0378, 0.1275, 0.0041, 0.0391, 0.1275, 0.0041, 0.0391, 0.0862, 0.0022, 0.0378, 0.0862, 0.0022, 0.0378, 0.1275, 0.0022, 0.0378, 0.0862, 0, 0.0374, 0.1275, 0.0022, 0.0378, 0.1275, 0.0022, 0.0378, 0.0862, 0, 0.0374, 0.0862, 0, 0.0374, 0.1275, -0.0041, 0.0391, 0.1275, 0, 0.0374, 0.1275, -0.0022, 0.0378, 0.1275, -0.0041, 0.0391, 0.1275, 0, 0.0431, 0.1275, 0, 0.0374, 0.1275, 0.0022, 0.0378, 0.1275, 0, 0.0374, 0.1275, 0, 0.0431, 0.1275, -0.0053, 0.0409, 0.1275, 0, 0.0431, 0.1275, -0.0041, 0.0391, 0.1275, 0.0022, 0.0378, 0.1275, 0, 0.0431, 0.1275, 0.0041, 0.0391, 0.1275, -0.0053, 0.0409, 0.1275, -0.0058, 0.0431, 0.1275, 0, 0.0431, 0.1275, 0.0053, 0.0409, 0.1275, 0.0041, 0.0391, 0.1275, 0, 0.0431, 0.1275, -0.0053, 0.0453, 0.1275, 0, 0.0431, 0.1275, -0.0058, 0.0431, 0.1275, 0.0053, 0.0409, 0.1275, 0, 0.0431, 0.1275, 0.0058, 0.0431, 0.1275, -0.0053, 0.0453, 0.1275, -0.0041, 0.047199998, 0.1275, 0, 0.0431, 0.1275, -0.0022, 0.048499998, 0.1275, 0, 0.0431, 0.1275, -0.0041, 0.047199998, 0.1275, 0.0053, 0.0453, 0.1275, 0.0058, 0.0431, 0.1275, 0, 0.0431, 0.1275, -0.0022, 0.048499998, 0.1275, 0, 0.048899997, 0.1275, 0, 0.0431, 0.1275, 0.0053, 0.0453, 0.1275, 0, 0.0431, 0.1275, 0.0041, 0.047199998, 0.1275, 0.0022, 0.048499998, 0.1275, 0, 0.0431, 0.1275, 0, 0.048899997, 0.1275, 0.0022, 0.048499998, 0.1275, 0.0041, 0.047199998, 0.1275, 0, 0.0431, 0.1275, -0.0256, 0.0889, 0.0866, -0.0879, 0.1266, 0.0866, -0.023699999, 0.098699994, 0.0866, -0.023699999, 0.098699994, 0.0866, -0.0879, 0.1266, 0.0866, -0.0879, 0.1574, 0.0866, -0.0256, 0.0889, 0.0866, -0.0879, 0.1048, 0.0866, -0.0879, 0.1266, 0.0866, -0.023699999, 0.098699994, 0.0866, -0.0879, 0.1574, 0.0866, -0.018099999, 0.107099995, 0.0866, -0.023699999, 0.0791, 0.0866, -0.0879, 0.1048, 0.0866, -0.0256, 0.0889, 0.0866, -0.018099999, 0.107099995, 0.0866, -0.0879, 0.1574, 0.0866, -0.043899998, 0.19489999, 0.0866, -0.023699999, 0.0791, 0.0866, -0.0879, 0.0751, 0.0866, -0.0879, 0.1048, 0.0866, -0.018099999, 0.107099995, 0.0866, -0.043899998, 0.19489999, 0.0866, -0.0098, 0.1126, 0.0866, -0.018099999, 0.0708, 0.0866, -0.0879, 0.0751, 0.0866, -0.023699999, 0.0791, 0.0866, -0.0098, 0.1126, 0.0866, -0.043899998, 0.19489999, 0.0866, 0, 0.2324, 0.0866, -0.018099999, 0.0708, 0.0866, -0.0879, 0.042, 0.0866, -0.0879, 0.0751, 0.0866, -0.0098, 0.1126, 0.0866, 0, 0.2324, 0.0866, 0, 0.114599995, 0.0866, -0.0098, 0.0652, 0.0866, -0.0879, 0.042, 0.0866, -0.018099999, 0.0708, 0.0866, 0.0098, 0.1126, 0.0866, 0, 0.114599995, 0.0866, 0, 0.2324, 0.0866, -0.0098, 0.0652, 0.0866, -0.0879, 0, 0.0866, -0.0879, 0.042, 0.0866, 0.0098, 0.1126, 0.0866, 0, 0.2324, 0.0866, 0.043899998, 0.19489999, 0.0866, 0, 0.0633, 0.0866, -0.0879, 0, 0.0866, -0.0098, 0.0652, 0.0866, 0.018099999, 0.107099995, 0.0866, 0.0098, 0.1126, 0.0866, 0.043899998, 0.19489999, 0.0866, 0, 0.0633, 0.0866, 0, 0, 0.0866, -0.0879, 0, 0.0866, 0, 0.0633, 0.0866, 0.0879, 0, 0.0866, 0, 0, 0.0866, 0, 0.0633, 0.0866, 0.0098, 0.0652, 0.0866, 0.0879, 0, 0.0866, 0.018099999, 0.107099995, 0.0866, 0.043899998, 0.19489999, 0.0866, 0.0879, 0.1574, 0.0866, 0.023699999, 0.098699994, 0.0866, 0.018099999, 0.107099995, 0.0866, 0.0879, 0.1574, 0.0866, 0.023699999, 0.098699994, 0.0866, 0.0879, 0.1574, 0.0866, 0.0879, 0.1266, 0.0866, 0.0256, 0.0889, 0.0866, 0.023699999, 0.098699994, 0.0866, 0.0879, 0.1266, 0.0866, 0.0256, 0.0889, 0.0866, 0.0879, 0.1266, 0.0866, 0.0879, 0.1048, 0.0866, 0.023699999, 0.0791, 0.0866, 0.0256, 0.0889, 0.0866, 0.0879, 0.1048, 0.0866, 0.023699999, 0.0791, 0.0866, 0.0879, 0.1048, 0.0866, 0.0879, 0.0751, 0.0866, 0.018099999, 0.0708, 0.0866, 0.023699999, 0.0791, 0.0866, 0.0879, 0.0751, 0.0866, 0.018099999, 0.0708, 0.0866, 0.0879, 0.0751, 0.0866, 0.0879, 0.042, 0.0866, 0.0098, 0.0652, 0.0866, 0.018099999, 0.0708, 0.0866, 0.0879, 0.042, 0.0866, 0.0098, 0.0652, 0.0866, 0.0879, 0.042, 0.0866, 0.0879, 0, 0.0866, -0.0879, 0.1048, 0.0866, -0.0879, 0.1266, -0.084199995, -0.0879, 0.1266, 0.0866, -0.0879, 0.1266, 0.0866, -0.0879, 0.1266, -0.084199995, -0.0879, 0.1574, -0.084199995, -0.0879, 0.1266, 0.0866, -0.0879, 0.1574, -0.084199995, -0.0879, 0.1574, 0.0866, -0.0879, 0.1048, 0.0866, -0.0879, 0.1048, -0.084199995, -0.0879, 0.1266, -0.084199995, -0.0879, 0.0751, 0.0866, -0.0879, 0.1048, -0.084199995, -0.0879, 0.1048, 0.0866, -0.0879, 0.0751, 0.0866, -0.0879, 0.0751, -0.084199995, -0.0879, 0.1048, -0.084199995, -0.0879, 0.042, 0.0866, -0.0879, 0.0751, -0.084199995, -0.0879, 0.0751, 0.0866, -0.0879, 0.042, 0.0866, -0.0879, 0.042, -0.084199995, -0.0879, 0.0751, -0.084199995, -0.0879, 0, 0.0866, -0.0879, 0.042, -0.084199995, -0.0879, 0.042, 0.0866, -0.0879, 0, 0.0866, -0.0879, 0, -0.084199995, -0.0879, 0.042, -0.084199995, 0, 0, 0.0866, -0.0879, 0, -0.084199995, -0.0879, 0, 0.0866, 0, 0, 0.0866, 0, 0, -0.084199995, -0.0879, 0, -0.084199995, 0, 0, 0.0866, 0.0879, 0, -0.084199995, 0, 0, -0.084199995, 0, 0, 0.0866, 0.0879, 0, 0.0866, 0.0879, 0, -0.084199995, 0, 0.18239999, -0.084199995, 0.0879, 0.1574, -0.084199995, 0, 0.2324, -0.084199995, 0, 0.18239999, -0.084199995, 0, 0.2324, -0.084199995, -0.0879, 0.1574, -0.084199995, 0, 0.18239999, -0.084199995, 0.0879, 0.1266, -0.084199995, 0.0879, 0.1574, -0.084199995, 0, 0.18239999, -0.084199995, -0.0879, 0.1574, -0.084199995, -0.0879, 0.1266, -0.084199995, 0, 0.13, -0.084199995, 0.0879, 0.1266, -0.084199995, 0, 0.18239999, -0.084199995, 0, 0.13, -0.084199995, 0, 0.18239999, -0.084199995, -0.0879, 0.1266, -0.084199995, 0, 0.13, -0.084199995, 0.0879, 0.1048, -0.084199995, 0.0879, 0.1266, -0.084199995, 0, 0.13, -0.084199995, -0.0879, 0.1266, -0.084199995, -0.0879, 0.1048, -0.084199995, 0, 0.090799995, -0.084199995, 0.0879, 0.1048, -0.084199995, 0, 0.13, -0.084199995, 0, 0.090799995, -0.084199995, 0, 0.13, -0.084199995, -0.0879, 0.1048, -0.084199995, 0, 0.090799995, -0.084199995, 0.0879, 0.0751, -0.084199995, 0.0879, 0.1048, -0.084199995, 0, 0.090799995, -0.084199995, -0.0879, 0.1048, -0.084199995, -0.0879, 0.0751, -0.084199995, 0, 0.042, -0.084199995, 0.0879, 0.0751, -0.084199995, 0, 0.090799995, -0.084199995, 0, 0.042, -0.084199995, 0, 0.090799995, -0.084199995, -0.0879, 0.0751, -0.084199995, 0, 0.042, -0.084199995, 0.0879, 0.042, -0.084199995, 0.0879, 0.0751, -0.084199995, 0, 0.042, -0.084199995, -0.0879, 0.0751, -0.084199995, -0.0879, 0.042, -0.084199995, 0.0879, 0, -0.084199995, 0.0879, 0.042, -0.084199995, 0, 0.042, -0.084199995, -0.0879, 0, -0.084199995, 0, 0.042, -0.084199995, -0.0879, 0.042, -0.084199995, 0.0879, 0, -0.084199995, 0, 0.042, -0.084199995, 0, 0, -0.084199995, -0.0879, 0, -0.084199995, 0, 0, -0.084199995, 0, 0.042, -0.084199995, 0.0879, 0.1266, 0.0866, 0.0879, 0.1574, -0.084199995, 0.0879, 0.1266, -0.084199995, 0.0879, 0.1266, 0.0866, 0.0879, 0.1574, 0.0866, 0.0879, 0.1574, -0.084199995, 0.0879, 0.1048, 0.0866, 0.0879, 0.1266, 0.0866, 0.0879, 0.1266, -0.084199995, 0.0879, 0.1048, 0.0866, 0.0879, 0.1266, -0.084199995, 0.0879, 0.1048, -0.084199995, 0.0879, 0.0751, 0.0866, 0.0879, 0.1048, 0.0866, 0.0879, 0.1048, -0.084199995, 0.0879, 0.0751, 0.0866, 0.0879, 0.1048, -0.084199995, 0.0879, 0.0751, -0.084199995, 0.0879, 0.042, 0.0866, 0.0879, 0.0751, 0.0866, 0.0879, 0.0751, -0.084199995, 0.0879, 0.042, 0.0866, 0.0879, 0.0751, -0.084199995, 0.0879, 0.042, -0.084199995, 0.0879, 0, 0.0866, 0.0879, 0.042, 0.0866, 0.0879, 0.042, -0.084199995, 0.0879, 0, 0.0866, 0.0879, 0.042, -0.084199995, 0.0879, 0, -0.084199995, 0, 0.114599995, 0.0866, -0.0098, 0.1126, 0.055, -0.0098, 0.1126, 0.0866, 0, 0.114599995, 0.0866, 0, 0.114599995, 0.055, -0.0098, 0.1126, 0.055, -0.0098, 0.1126, 0.0866, -0.0098, 0.1126, 0.055, -0.018099999, 0.107099995, 0.055, -0.0098, 0.1126, 0.0866, -0.018099999, 0.107099995, 0.055, -0.018099999, 0.107099995, 0.0866, -0.018099999, 0.107099995, 0.0866, -0.018099999, 0.107099995, 0.055, -0.023699999, 0.098699994, 0.055, -0.018099999, 0.107099995, 0.0866, -0.023699999, 0.098699994, 0.055, -0.023699999, 0.098699994, 0.0866, -0.023699999, 0.098699994, 0.0866, -0.023699999, 0.098699994, 0.055, -0.0256, 0.0889, 0.055, -0.023699999, 0.098699994, 0.0866, -0.0256, 0.0889, 0.055, -0.0256, 0.0889, 0.0866, -0.0256, 0.0889, 0.0866, -0.0256, 0.0889, 0.055, -0.023699999, 0.0791, 0.055, -0.0256, 0.0889, 0.0866, -0.023699999, 0.0791, 0.055, -0.023699999, 0.0791, 0.0866, -0.023699999, 0.0791, 0.0866, -0.023699999, 0.0791, 0.055, -0.018099999, 0.0708, 0.055, -0.023699999, 0.0791, 0.0866, -0.018099999, 0.0708, 0.055, -0.018099999, 0.0708, 0.0866, -0.018099999, 0.0708, 0.0866, -0.018099999, 0.0708, 0.055, -0.0098, 0.0652, 0.055, -0.018099999, 0.0708, 0.0866, -0.0098, 0.0652, 0.055, -0.0098, 0.0652, 0.0866, -0.0098, 0.0652, 0.0866, -0.0098, 0.0652, 0.055, 0, 0.0633, 0.055, -0.0098, 0.0652, 0.0866, 0, 0.0633, 0.055, 0, 0.0633, 0.0866, 0.0098, 0.0652, 0.0866, 0, 0.0633, 0.0866, 0, 0.0633, 0.055, 0.0098, 0.0652, 0.0866, 0, 0.0633, 0.055, 0.0098, 0.0652, 0.055, 0, 0.114599995, 0.0866, 0.0098, 0.1126, 0.055, 0, 0.114599995, 0.055, 0, 0.114599995, 0.0866, 0.0098, 0.1126, 0.0866, 0.0098, 0.1126, 0.055, 0.0098, 0.1126, 0.0866, 0.018099999, 0.107099995, 0.055, 0.0098, 0.1126, 0.055, 0.0098, 0.1126, 0.0866, 0.018099999, 0.107099995, 0.0866, 0.018099999, 0.107099995, 0.055, 0.018099999, 0.107099995, 0.0866, 0.023699999, 0.098699994, 0.055, 0.018099999, 0.107099995, 0.055, 0.018099999, 0.107099995, 0.0866, 0.023699999, 0.098699994, 0.0866, 0.023699999, 0.098699994, 0.055, 0.023699999, 0.098699994, 0.0866, 0.0256, 0.0889, 0.055, 0.023699999, 0.098699994, 0.055, 0.023699999, 0.098699994, 0.0866, 0.0256, 0.0889, 0.0866, 0.0256, 0.0889, 0.055, 0.0256, 0.0889, 0.0866, 0.023699999, 0.0791, 0.055, 0.0256, 0.0889, 0.055, 0.0256, 0.0889, 0.0866, 0.023699999, 0.0791, 0.0866, 0.023699999, 0.0791, 0.055, 0.023699999, 0.0791, 0.0866, 0.018099999, 0.0708, 0.055, 0.023699999, 0.0791, 0.055, 0.023699999, 0.0791, 0.0866, 0.018099999, 0.0708, 0.0866, 0.018099999, 0.0708, 0.055, 0.018099999, 0.0708, 0.0866, 0.0098, 0.0652, 0.055, 0.018099999, 0.0708, 0.055, 0.018099999, 0.0708, 0.0866, 0.0098, 0.0652, 0.0866, 0.0098, 0.0652, 0.055, -0.115899995, 0.15699999, 0.103199996, 0, 0.2559, -0.100099996, 0, 0.2559, 0.103199996, -0.115899995, 0.15699999, 0.103199996, -0.115899995, 0.15699999, -0.100099996, 0, 0.2559, -0.100099996, 0, 0.2324, -0.100099996, -0.115899995, 0.15699999, -0.100099996, -0.1043, 0.1434, -0.100099996, 0, 0.2324, -0.100099996, 0, 0.2559, -0.100099996, -0.115899995, 0.15699999, -0.100099996, 0, 0.2324, -0.100099996, 0.115899995, 0.15699999, -0.100099996, 0, 0.2559, -0.100099996, 0, 0.2324, -0.100099996, 0.1043, 0.1434, -0.100099996, 0.115899995, 0.15699999, -0.100099996, -0.1043, 0.1434, 0.103199996, 0, 0.2559, 0.103199996, 0, 0.2324, 0.103199996, -0.1043, 0.1434, 0.103199996, -0.115899995, 0.15699999, 0.103199996, 0, 0.2559, 0.103199996, 0.115899995, 0.15699999, 0.103199996, 0, 0.2324, 0.103199996, 0, 0.2559, 0.103199996, 0.115899995, 0.15699999, 0.103199996, 0.1043, 0.1434, 0.103199996, 0, 0.2324, 0.103199996, 0.1043, 0.1434, 0.103199996, 0, 0.2324, -0.100099996, 0, 0.2324, 0.103199996, 0.1043, 0.1434, 0.103199996, 0.1043, 0.1434, -0.100099996, 0, 0.2324, -0.100099996, -0.1043, 0.1434, -0.100099996, -0.115899995, 0.15699999, 0.103199996, -0.1043, 0.1434, 0.103199996, -0.1043, 0.1434, -0.100099996, -0.115899995, 0.15699999, -0.100099996, -0.115899995, 0.15699999, 0.103199996, 0.115899995, 0.15699999, -0.100099996, 0, 0.2559, 0.103199996, 0, 0.2559, -0.100099996, 0.115899995, 0.15699999, -0.100099996, 0.115899995, 0.15699999, 0.103199996, 0, 0.2559, 0.103199996, 0.1043, 0.1434, -0.100099996, 0.115899995, 0.15699999, 0.103199996, 0.115899995, 0.15699999, -0.100099996, 0.1043, 0.1434, -0.100099996, 0.1043, 0.1434, 0.103199996, 0.115899995, 0.15699999, 0.103199996, 0, 0.0889, 0.055, 0.0098, 0.0652, 0.055, 0, 0.0633, 0.055, 0, 0.0889, 0.055, 0.018099999, 0.0708, 0.055, 0.0098, 0.0652, 0.055, 0, 0.0633, 0.055, -0.0098, 0.0652, 0.055, -0.018099999, 0.0708, 0.055, 0, 0.0633, 0.055, -0.018099999, 0.0708, 0.055, 0, 0.0889, 0.055, 0, 0.0889, 0.055, -0.018099999, 0.0708, 0.055, -0.023699999, 0.0791, 0.055, 0, 0.0889, 0.055, -0.023699999, 0.0791, 0.055, -0.0256, 0.0889, 0.055, 0.0256, 0.0889, 0.055, 0.023699999, 0.0791, 0.055, 0.018099999, 0.0708, 0.055, 0.0256, 0.0889, 0.055, 0.018099999, 0.0708, 0.055, 0, 0.0889, 0.055, 0, 0.0889, 0.055, 0.023699999, 0.098699994, 0.055, 0.0256, 0.0889, 0.055, 0, 0.0889, 0.055, 0.018099999, 0.107099995, 0.055, 0.023699999, 0.098699994, 0.055, -0.018099999, 0.107099995, 0.055, 0, 0.0889, 0.055, -0.0256, 0.0889, 0.055, -0.018099999, 0.107099995, 0.055, -0.0256, 0.0889, 0.055, -0.023699999, 0.098699994, 0.055, -0.0098, 0.1126, 0.055, 0, 0.0889, 0.055, -0.018099999, 0.107099995, 0.055, -0.0098, 0.1126, 0.055, 0, 0.114599995, 0.055, 0, 0.0889, 0.055, 0, 0.114599995, 0.055, 0.018099999, 0.107099995, 0.055, 0, 0.0889, 0.055, 0, 0.114599995, 0.055, 0.0098, 0.1126, 0.055, 0.018099999, 0.107099995, 0.055, -0.1043, 0.1434, -0.100099996, 0, 0.2324, 0.103199996, 0, 0.2324, -0.100099996, -0.1043, 0.1434, -0.100099996, -0.1043, 0.1434, 0.103199996, 0, 0.2324, 0.103199996)
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rvifb"]
-sky_top_color = Color(0.24006462, 0.6263312, 0.962735, 1)
-sky_horizon_color = Color(0.19060168, 0.72262657, 0.85307723, 1)
-sky_curve = 0.19118394
-
-[sub_resource type="Sky" id="Sky_3ov02"]
-sky_material = SubResource("ProceduralSkyMaterial_rvifb")
-
-[sub_resource type="Environment" id="Environment_6hthj"]
-background_mode = 2
-sky = SubResource("Sky_3ov02")
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(0.40940192, 0.729778, 0.77056164, 1)
-fog_light_energy = 1.5
-fog_density = 0.2
-fog_depth_curve = 2.3784142
-fog_depth_end = 30.0
-
-[node name="MyBase" instance=ExtResource("1_0drpd")]
-
-[node name="Walking" type="Node" parent="XROrigin3D/LeftHand" index="0" groups=["movement_providers"]]
-script = ExtResource("3_ktwt8")
-max_speed = 5.0
-strafe = true
-metadata/_custom_type_script = "uid://bpmodm04r80w6"
-
-[node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D" index="3"]
-top_level = true
-script = ExtResource("4_fyqd8")
-physics = SubResource("Resource_ljivr")
-metadata/_custom_type_script = "uid://iyw6scisivrv"
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="1"]
-transform = Transform3D(0.9569505, 0.2844989, -0.05749942, 0, 0.19810219, 0.98018134, 0.29025126, -0.937985, 0.18957399, 0, 17.404432, 0)
-
-[node name="VRaplinka2" type="Node3D" parent="." index="2"]
+[node name="VRaplinka2" type="Node3D"]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
 visible = false
 
-[node name="Table_low" type="MeshInstance3D" parent="VRaplinka2" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.021884, 0, 6.700819)
+[node name="Table_low" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37924382, 0, -4.914161)
 mesh = SubResource("ArrayMesh_v4m12")
 skeleton = NodePath("")
 metadata/extras = {
 "currentUVSet": "map1"
 }
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Table_low" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Table_low"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Table_low/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table_low/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_2v4hs")
 
-[node name="Cube_002" type="MeshInstance3D" parent="VRaplinka2" index="1"]
+[node name="Cube_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5883512, 0.7870488, -9.63097)
 mesh = SubResource("ArrayMesh_82mg0")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_002" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_002/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_2uhgb")
 
-[node name="Cube_003" type="MeshInstance3D" parent="VRaplinka2" index="2"]
+[node name="Cube_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1408167, 0.7870488, -9.63097)
 mesh = SubResource("ArrayMesh_33m5q")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_003" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_003/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hxvil")
 
-[node name="Cube_004" type="MeshInstance3D" parent="VRaplinka2" index="3"]
+[node name="Cube_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.370688, 0.7870488, 13.955953)
 mesh = SubResource("ArrayMesh_wel7y")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_004" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_004"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_004/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_004/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_qbkii")
 
-[node name="Cube_022" type="MeshInstance3D" parent="VRaplinka2" index="4"]
+[node name="Cube_022" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0334964, 0.82381725, 2.7909555)
 mesh = SubResource("ArrayMesh_8dkwd")
 skeleton = NodePath("")
 
-[node name="Cube_008" type="MeshInstance3D" parent="VRaplinka2/Cube_022" index="0"]
+[node name="Cube_008" type="MeshInstance3D" parent="Cube_022"]
 mesh = SubResource("ArrayMesh_ls7hl")
 skeleton = NodePath("")
 
-[node name="Cube_017" type="MeshInstance3D" parent="VRaplinka2/Cube_022" index="1"]
+[node name="Cube_017" type="MeshInstance3D" parent="Cube_022"]
 mesh = SubResource("ArrayMesh_iug2m")
 skeleton = NodePath("")
 
-[node name="Cube_018" type="MeshInstance3D" parent="VRaplinka2/Cube_022" index="2"]
+[node name="Cube_018" type="MeshInstance3D" parent="Cube_022"]
 mesh = SubResource("ArrayMesh_30d8h")
 skeleton = NodePath("")
 
-[node name="Cube_019" type="MeshInstance3D" parent="VRaplinka2/Cube_022" index="3"]
+[node name="Cube_019" type="MeshInstance3D" parent="Cube_022"]
 mesh = SubResource("ArrayMesh_utr72")
 skeleton = NodePath("")
 
-[node name="Cube_020" type="MeshInstance3D" parent="VRaplinka2/Cube_022" index="4"]
+[node name="Cube_020" type="MeshInstance3D" parent="Cube_022"]
 mesh = SubResource("ArrayMesh_i8bcq")
 skeleton = NodePath("")
 
-[node name="Cube_021" type="MeshInstance3D" parent="VRaplinka2/Cube_022" index="5"]
+[node name="Cube_021" type="MeshInstance3D" parent="Cube_022"]
 mesh = SubResource("ArrayMesh_akeve")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_022" index="6"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_022"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_022/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_022/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_k1i7e")
 
-[node name="Cube_023" type="MeshInstance3D" parent="VRaplinka2" index="5"]
+[node name="Cube_023" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.453009, 0.82381725, -2.3449702)
 mesh = SubResource("ArrayMesh_7kbk5")
 skeleton = NodePath("")
 
-[node name="Cube_024" type="MeshInstance3D" parent="VRaplinka2/Cube_023" index="0"]
+[node name="Cube_024" type="MeshInstance3D" parent="Cube_023"]
 mesh = SubResource("ArrayMesh_kxs60")
 skeleton = NodePath("")
 
-[node name="Cube_025" type="MeshInstance3D" parent="VRaplinka2/Cube_023" index="1"]
+[node name="Cube_025" type="MeshInstance3D" parent="Cube_023"]
 mesh = SubResource("ArrayMesh_haen0")
 skeleton = NodePath("")
 
-[node name="Cube_026" type="MeshInstance3D" parent="VRaplinka2/Cube_023" index="2"]
+[node name="Cube_026" type="MeshInstance3D" parent="Cube_023"]
 mesh = SubResource("ArrayMesh_eu1eq")
 skeleton = NodePath("")
 
-[node name="Cube_027" type="MeshInstance3D" parent="VRaplinka2/Cube_023" index="3"]
+[node name="Cube_027" type="MeshInstance3D" parent="Cube_023"]
 mesh = SubResource("ArrayMesh_jwot1")
 skeleton = NodePath("")
 
-[node name="Cube_028" type="MeshInstance3D" parent="VRaplinka2/Cube_023" index="4"]
+[node name="Cube_028" type="MeshInstance3D" parent="Cube_023"]
 mesh = SubResource("ArrayMesh_nsex4")
 skeleton = NodePath("")
 
-[node name="Cube_029" type="MeshInstance3D" parent="VRaplinka2/Cube_023" index="5"]
+[node name="Cube_029" type="MeshInstance3D" parent="Cube_023"]
 mesh = SubResource("ArrayMesh_l8hhi")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_023" index="6"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_023"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_023/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_023/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_w3u20")
 
-[node name="Cube_036" type="MeshInstance3D" parent="VRaplinka2" index="6"]
+[node name="Cube_036" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.292843, 0.82381725, -2.3449702)
 mesh = SubResource("ArrayMesh_p2qh6")
 skeleton = NodePath("")
 
-[node name="Cube_030" type="MeshInstance3D" parent="VRaplinka2/Cube_036" index="0"]
+[node name="Cube_030" type="MeshInstance3D" parent="Cube_036"]
 mesh = SubResource("ArrayMesh_y20rj")
 skeleton = NodePath("")
 
-[node name="Cube_031" type="MeshInstance3D" parent="VRaplinka2/Cube_036" index="1"]
+[node name="Cube_031" type="MeshInstance3D" parent="Cube_036"]
 mesh = SubResource("ArrayMesh_cx7jr")
 skeleton = NodePath("")
 
-[node name="Cube_032" type="MeshInstance3D" parent="VRaplinka2/Cube_036" index="2"]
+[node name="Cube_032" type="MeshInstance3D" parent="Cube_036"]
 mesh = SubResource("ArrayMesh_2t4oq")
 skeleton = NodePath("")
 
-[node name="Cube_033" type="MeshInstance3D" parent="VRaplinka2/Cube_036" index="3"]
+[node name="Cube_033" type="MeshInstance3D" parent="Cube_036"]
 mesh = SubResource("ArrayMesh_j302e")
 skeleton = NodePath("")
 
-[node name="Cube_034" type="MeshInstance3D" parent="VRaplinka2/Cube_036" index="4"]
+[node name="Cube_034" type="MeshInstance3D" parent="Cube_036"]
 mesh = SubResource("ArrayMesh_qbiol")
 skeleton = NodePath("")
 
-[node name="Cube_035" type="MeshInstance3D" parent="VRaplinka2/Cube_036" index="5"]
+[node name="Cube_035" type="MeshInstance3D" parent="Cube_036"]
 mesh = SubResource("ArrayMesh_o0trs")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_036" index="6"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_036"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_036/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_036/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_2yjik")
 
-[node name="Cube_039" type="MeshInstance3D" parent="VRaplinka2" index="7"]
+[node name="Cube_039" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.862209, 0.82382894, -2.6796534)
 mesh = SubResource("ArrayMesh_0wdeq")
 skeleton = NodePath("")
 
-[node name="Cube_037" type="MeshInstance3D" parent="VRaplinka2/Cube_039" index="0"]
+[node name="Cube_037" type="MeshInstance3D" parent="Cube_039"]
 mesh = SubResource("ArrayMesh_1e5qy")
 skeleton = NodePath("")
 
-[node name="Cube_038" type="MeshInstance3D" parent="VRaplinka2/Cube_039" index="1"]
+[node name="Cube_038" type="MeshInstance3D" parent="Cube_039"]
 mesh = SubResource("ArrayMesh_ksym2")
 skeleton = NodePath("")
 
-[node name="Cube_040" type="MeshInstance3D" parent="VRaplinka2/Cube_039" index="2"]
+[node name="Cube_040" type="MeshInstance3D" parent="Cube_039"]
 mesh = SubResource("ArrayMesh_ko7l7")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_039" index="3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_039"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_039/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_039/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_wk1ib")
 
-[node name="Cube_042" type="MeshInstance3D" parent="VRaplinka2" index="8"]
+[node name="Cube_042" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7506537, 0.82382894, -2.6796534)
 mesh = SubResource("ArrayMesh_e1a1b")
 skeleton = NodePath("")
 
-[node name="Cube_041" type="MeshInstance3D" parent="VRaplinka2/Cube_042" index="0"]
+[node name="Cube_041" type="MeshInstance3D" parent="Cube_042"]
 mesh = SubResource("ArrayMesh_sikem")
 skeleton = NodePath("")
 
-[node name="Cube_043" type="MeshInstance3D" parent="VRaplinka2/Cube_042" index="1"]
+[node name="Cube_043" type="MeshInstance3D" parent="Cube_042"]
 mesh = SubResource("ArrayMesh_yq6s6")
 skeleton = NodePath("")
 
-[node name="Cube_044" type="MeshInstance3D" parent="VRaplinka2/Cube_042" index="2"]
+[node name="Cube_044" type="MeshInstance3D" parent="Cube_042"]
 mesh = SubResource("ArrayMesh_ks8wi")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_042" index="3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_042"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_042/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_042/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_tt50h")
 
-[node name="Cube_047" type="MeshInstance3D" parent="VRaplinka2" index="9"]
+[node name="Cube_047" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.358984, 0.82382894, 3.4990504)
 mesh = SubResource("ArrayMesh_oiypk")
 skeleton = NodePath("")
 
-[node name="Cube_045" type="MeshInstance3D" parent="VRaplinka2/Cube_047" index="0"]
+[node name="Cube_045" type="MeshInstance3D" parent="Cube_047"]
 mesh = SubResource("ArrayMesh_vh71n")
 skeleton = NodePath("")
 
-[node name="Cube_046" type="MeshInstance3D" parent="VRaplinka2/Cube_047" index="1"]
+[node name="Cube_046" type="MeshInstance3D" parent="Cube_047"]
 mesh = SubResource("ArrayMesh_aukgh")
 skeleton = NodePath("")
 
-[node name="Cube_048" type="MeshInstance3D" parent="VRaplinka2/Cube_047" index="2"]
+[node name="Cube_048" type="MeshInstance3D" parent="Cube_047"]
 mesh = SubResource("ArrayMesh_4eg2e")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_047" index="3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_047"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_047/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_047/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_gadi3")
 
-[node name="Plane" type="MeshInstance3D" parent="VRaplinka2" index="10"]
+[node name="Plane" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_62n7s")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Plane" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Plane/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_cv47w")
 
-[node name="Icosphere" type="MeshInstance3D" parent="VRaplinka2" index="11"]
+[node name="Icosphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.796158, 4.208155, 4.2223477)
 mesh = SubResource("ArrayMesh_w6q4c")
 skeleton = NodePath("")
 
-[node name="Cylinder" type="MeshInstance3D" parent="VRaplinka2/Icosphere" index="0"]
+[node name="Cylinder" type="MeshInstance3D" parent="Icosphere"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.96838, -3.7780442, 0.3240013)
 mesh = SubResource("ArrayMesh_e5vx4")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_tq0xh")
 
-[node name="Icosphere_027" type="MeshInstance3D" parent="VRaplinka2" index="12"]
+[node name="Icosphere_027" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.215197, 0.95590985, -11.075251)
 mesh = SubResource("ArrayMesh_nonno")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_027" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_027"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_027/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_027/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_vlbjr")
 
-[node name="Icosphere_001_Icosphere_003" type="MeshInstance3D" parent="VRaplinka2" index="13"]
+[node name="Icosphere_001_Icosphere_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.408139, 0, 3.5556846)
 mesh = SubResource("ArrayMesh_thpng")
 skeleton = NodePath("")
 
-[node name="Cylinder_014" type="MeshInstance3D" parent="VRaplinka2/Icosphere_001_Icosphere_003" index="0"]
+[node name="Cylinder_014" type="MeshInstance3D" parent="Icosphere_001_Icosphere_003"]
 mesh = SubResource("ArrayMesh_mt1pm")
 skeleton = NodePath("")
 
-[node name="Icosphere_Icosphere_002" type="MeshInstance3D" parent="VRaplinka2/Icosphere_001_Icosphere_003/Cylinder_014" index="0"]
+[node name="Icosphere_Icosphere_002" type="MeshInstance3D" parent="Icosphere_001_Icosphere_003/Cylinder_014"]
 mesh = SubResource("ArrayMesh_ew37r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_001_Icosphere_003" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_001_Icosphere_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_001_Icosphere_003/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_001_Icosphere_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ctvvr")
 
-[node name="Cube_016" type="MeshInstance3D" parent="VRaplinka2" index="14"]
+[node name="Cube_016" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_7flwp")
 skeleton = NodePath("")
 
-[node name="Icosphere_024" type="MeshInstance3D" parent="VRaplinka2" index="15"]
+[node name="Icosphere_024" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.173067, -0.6354193, -14.698683)
 mesh = SubResource("ArrayMesh_i3m3g")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_024" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_024"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_024/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_024/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_f6kmr")
 
-[node name="Icosphere_022" type="MeshInstance3D" parent="VRaplinka2" index="16"]
+[node name="Icosphere_022" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.406286, -1.8263631, 12.3300705)
 mesh = SubResource("ArrayMesh_ebw67")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_022" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_022"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_022/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_022/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_b6kwv")
 
-[node name="Icosphere_021" type="MeshInstance3D" parent="VRaplinka2" index="17"]
+[node name="Icosphere_021" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.223415, 0.00726676, 11.674127)
 mesh = SubResource("ArrayMesh_7evdo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_021" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_021"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_021/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_021/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_bqq7g")
 
-[node name="Icosphere_020" type="MeshInstance3D" parent="VRaplinka2" index="18"]
+[node name="Icosphere_020" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.277445, 0.079567075, 12.341481)
 mesh = SubResource("ArrayMesh_qo0r6")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_020" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_020"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_020/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_020/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_y1nxt")
 
-[node name="Cube_009" type="MeshInstance3D" parent="VRaplinka2" index="19"]
+[node name="Cube_009" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.507189, 0.82381725, 2.7909555)
 mesh = SubResource("ArrayMesh_rrbsc")
 skeleton = NodePath("")
 
-[node name="Cube_010" type="MeshInstance3D" parent="VRaplinka2/Cube_009" index="0"]
+[node name="Cube_010" type="MeshInstance3D" parent="Cube_009"]
 mesh = SubResource("ArrayMesh_hipwb")
 skeleton = NodePath("")
 
-[node name="Cube_011" type="MeshInstance3D" parent="VRaplinka2/Cube_009" index="1"]
+[node name="Cube_011" type="MeshInstance3D" parent="Cube_009"]
 mesh = SubResource("ArrayMesh_re5fc")
 skeleton = NodePath("")
 
-[node name="Cube_012" type="MeshInstance3D" parent="VRaplinka2/Cube_009" index="2"]
+[node name="Cube_012" type="MeshInstance3D" parent="Cube_009"]
 mesh = SubResource("ArrayMesh_4lq3m")
 skeleton = NodePath("")
 
-[node name="Cube_013" type="MeshInstance3D" parent="VRaplinka2/Cube_009" index="3"]
+[node name="Cube_013" type="MeshInstance3D" parent="Cube_009"]
 mesh = SubResource("ArrayMesh_2mcrs")
 skeleton = NodePath("")
 
-[node name="Cube_014" type="MeshInstance3D" parent="VRaplinka2/Cube_009" index="4"]
+[node name="Cube_014" type="MeshInstance3D" parent="Cube_009"]
 mesh = SubResource("ArrayMesh_dqbrc")
 skeleton = NodePath("")
 
-[node name="Cube_015" type="MeshInstance3D" parent="VRaplinka2/Cube_009" index="5"]
+[node name="Cube_015" type="MeshInstance3D" parent="Cube_009"]
 mesh = SubResource("ArrayMesh_e3vr4")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_009" index="6"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_009"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_009/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_009/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_llhgk")
 
-[node name="Cube_005" type="MeshInstance3D" parent="VRaplinka2" index="20"]
+[node name="Cube_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0904965, 0.82382894, 2.9137206)
 mesh = SubResource("ArrayMesh_13ivs")
 skeleton = NodePath("")
 
-[node name="Cube" type="MeshInstance3D" parent="VRaplinka2/Cube_005" index="0"]
+[node name="Cube" type="MeshInstance3D" parent="Cube_005"]
 mesh = SubResource("ArrayMesh_81qot")
 skeleton = NodePath("")
 
-[node name="Cube_006" type="MeshInstance3D" parent="VRaplinka2/Cube_005" index="1"]
+[node name="Cube_006" type="MeshInstance3D" parent="Cube_005"]
 mesh = SubResource("ArrayMesh_sga8x")
 skeleton = NodePath("")
 
-[node name="Cube_007" type="MeshInstance3D" parent="VRaplinka2/Cube_005" index="2"]
+[node name="Cube_007" type="MeshInstance3D" parent="Cube_005"]
 mesh = SubResource("ArrayMesh_b0yco")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cube_005" index="3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_005"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cube_005/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_005/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_5bm0v")
 
-[node name="Cylinder_001" type="MeshInstance3D" parent="VRaplinka2" index="21"]
+[node name="Cylinder_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6535807, 0.6023817, 20.670143)
 mesh = SubResource("ArrayMesh_dlh6b")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cylinder_001" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder_001"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cylinder_001/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder_001/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_t7b2w")
 
-[node name="Icosphere_001" type="MeshInstance3D" parent="VRaplinka2" index="22"]
+[node name="Icosphere_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.683767, 0.08974955, -14.095159)
 mesh = SubResource("ArrayMesh_px0bn")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_001" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_001"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_001/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_001/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4p048")
 
-[node name="Sphere" type="MeshInstance3D" parent="VRaplinka2" index="23"]
+[node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.639261, 0.22420396, -10.578377)
 mesh = SubResource("ArrayMesh_l0ib3")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Sphere" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Sphere"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Sphere/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sphere/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_mdbm6")
 
-[node name="Icosphere_025" type="MeshInstance3D" parent="VRaplinka2" index="24"]
+[node name="Icosphere_025" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.154375, 0.25009882, -12.655418)
 mesh = SubResource("ArrayMesh_farec")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_025" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_025"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_025/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_025/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_2i551")
 
-[node name="Sphere_001" type="MeshInstance3D" parent="VRaplinka2" index="25"]
+[node name="Sphere_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.396557, 1.163407, -16.565338)
 mesh = SubResource("ArrayMesh_dyuid")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Sphere_001" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Sphere_001"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Sphere_001/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sphere_001/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_rwo6i")
 
-[node name="Cylinder_005" type="MeshInstance3D" parent="VRaplinka2" index="26"]
+[node name="Cylinder_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.359828, 0.7140571, 13.201067)
 mesh = SubResource("ArrayMesh_g6ywi")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cylinder_005" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder_005"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cylinder_005/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder_005/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_f8e5f")
 
-[node name="Icosphere_026" type="MeshInstance3D" parent="VRaplinka2" index="27"]
+[node name="Icosphere_026" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.963474, -1.3510754, -14.831115)
 mesh = SubResource("ArrayMesh_f7ryk")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_026" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_026"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_026/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_026/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4ujgb")
 
-[node name="Tree low_002" type="MeshInstance3D" parent="VRaplinka2" index="28"]
+[node name="Tree low_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.608356, 0, -13.184478)
 mesh = SubResource("ArrayMesh_memro")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Tree low_002" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree low_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Tree low_002/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree low_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_tn786")
 
-[node name="Icosphere_002" type="MeshInstance3D" parent="VRaplinka2" index="29"]
+[node name="Icosphere_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.796158, 4.208155, 14.580118)
 mesh = SubResource("ArrayMesh_5vi64")
 skeleton = NodePath("")
 
-[node name="Cylinder_002" type="MeshInstance3D" parent="VRaplinka2/Icosphere_002" index="0"]
+[node name="Cylinder_002" type="MeshInstance3D" parent="Icosphere_002"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37260818, -3.778044, 0.9507351)
 mesh = SubResource("ArrayMesh_3qsf1")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_002" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_002/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_kcvyd")
 
-[node name="Icosphere_003" type="MeshInstance3D" parent="VRaplinka2" index="30"]
+[node name="Icosphere_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.720458, 4.208155, 14.580118)
 mesh = SubResource("ArrayMesh_37yom")
 skeleton = NodePath("")
 
-[node name="Cylinder_003" type="MeshInstance3D" parent="VRaplinka2/Icosphere_003" index="0"]
+[node name="Cylinder_003" type="MeshInstance3D" parent="Icosphere_003"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37260818, -3.7780437, 0.95073605)
 mesh = SubResource("ArrayMesh_d1q24")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_003" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_003/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_pbj80")
 
-[node name="Icosphere_004" type="MeshInstance3D" parent="VRaplinka2" index="31"]
+[node name="Icosphere_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9233885, 4.208155, 19.50768)
 mesh = SubResource("ArrayMesh_ke285")
 skeleton = NodePath("")
 
-[node name="Cylinder_004" type="MeshInstance3D" parent="VRaplinka2/Icosphere_004" index="0"]
+[node name="Cylinder_004" type="MeshInstance3D" parent="Icosphere_004"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7194311, -3.778044, 0.7246742)
 mesh = SubResource("ArrayMesh_sntdb")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_004" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_004"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_004/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_004/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_rguw3")
 
-[node name="Icosphere_005" type="MeshInstance3D" parent="VRaplinka2" index="32"]
+[node name="Icosphere_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.141988, 4.208155, 19.50768)
 mesh = SubResource("ArrayMesh_2twpy")
 skeleton = NodePath("")
 
-[node name="Cylinder_006" type="MeshInstance3D" parent="VRaplinka2/Icosphere_005" index="0"]
+[node name="Cylinder_006" type="MeshInstance3D" parent="Icosphere_005"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.71943283, -3.778044, 0.7246723)
 mesh = SubResource("ArrayMesh_x1mt4")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_005" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_005"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_005/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_005/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_augkf")
 
-[node name="Tree low_003" type="MeshInstance3D" parent="VRaplinka2" index="33"]
+[node name="Tree low_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.608356, 0, 3.9684763)
 mesh = SubResource("ArrayMesh_nhf0b")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Tree low_003" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Tree low_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Tree low_003/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tree low_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_xh0qm")
 
-[node name="Icosphere_008" type="MeshInstance3D" parent="VRaplinka2" index="34"]
+[node name="Icosphere_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.248544, 4.208155, -19.069141)
 mesh = SubResource("ArrayMesh_j58os")
 skeleton = NodePath("")
 
-[node name="Cylinder_008" type="MeshInstance3D" parent="VRaplinka2/Icosphere_008" index="0"]
+[node name="Cylinder_008" type="MeshInstance3D" parent="Icosphere_008"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.903677, -3.7780437, -0.475502)
 mesh = SubResource("ArrayMesh_u0glv")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_008" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_008"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_008/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_008/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ibttf")
 
-[node name="Icosphere_009" type="MeshInstance3D" parent="VRaplinka2" index="35"]
+[node name="Icosphere_009" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.248544, 4.208155, -6.106102)
 mesh = SubResource("ArrayMesh_g420d")
 skeleton = NodePath("")
 
-[node name="Cylinder_009" type="MeshInstance3D" parent="VRaplinka2/Icosphere_009" index="0"]
+[node name="Cylinder_009" type="MeshInstance3D" parent="Icosphere_009"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.903677, -3.7780437, -0.47550106)
 mesh = SubResource("ArrayMesh_dr0c7")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_009" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_009"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_009/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_009/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_tishr")
 
-[node name="Icosphere_010" type="MeshInstance3D" parent="VRaplinka2" index="36"]
+[node name="Icosphere_010" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.724057, 4.208155, -6.106102)
 mesh = SubResource("ArrayMesh_c1qoq")
 skeleton = NodePath("")
 
-[node name="Cylinder_010" type="MeshInstance3D" parent="VRaplinka2/Icosphere_010" index="0"]
+[node name="Cylinder_010" type="MeshInstance3D" parent="Icosphere_010"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90367794, -3.7780437, -0.47550058)
 mesh = SubResource("ArrayMesh_fvpxj")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_010" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_010"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_010/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_010/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_38kqj")
 
-[node name="Icosphere_011" type="MeshInstance3D" parent="VRaplinka2" index="37"]
+[node name="Icosphere_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.724057, 4.208155, -19.2187)
 mesh = SubResource("ArrayMesh_nngsd")
 skeleton = NodePath("")
 
-[node name="Cylinder_011" type="MeshInstance3D" parent="VRaplinka2/Icosphere_011" index="0"]
+[node name="Cylinder_011" type="MeshInstance3D" parent="Icosphere_011"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.90367794, -3.7780437, -0.475502)
 mesh = SubResource("ArrayMesh_ge7a8")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_011" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_011"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_011/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_011/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hmr1t")
 
-[node name="Cylinder_013" type="MeshInstance3D" parent="VRaplinka2" index="38"]
+[node name="Cylinder_013" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.362215, 0.7140571, 20.603725)
 mesh = SubResource("ArrayMesh_fk6n0")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cylinder_013" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder_013"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cylinder_013/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder_013/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hckn6")
 
-[node name="Cylinder_015" type="MeshInstance3D" parent="VRaplinka2" index="39"]
+[node name="Cylinder_015" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.341913, 0.7140571, -14.110052)
 mesh = SubResource("ArrayMesh_vxr4b")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Cylinder_015" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder_015"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Cylinder_015/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder_015/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_yjx5k")
 
-[node name="Sphere_002" type="MeshInstance3D" parent="VRaplinka2" index="40"]
+[node name="Sphere_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.67166, 0.22420396, 20.376722)
 mesh = SubResource("ArrayMesh_2u4mp")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Sphere_002" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Sphere_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Sphere_002/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sphere_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_rx5cw")
 
-[node name="Icosphere_012" type="MeshInstance3D" parent="VRaplinka2" index="41"]
+[node name="Icosphere_012" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.074965, 0.25009882, 20.347752)
 mesh = SubResource("ArrayMesh_b1xf1")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_012" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_012"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_012/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_012/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ts0df")
 
-[node name="Icosphere_013" type="MeshInstance3D" parent="VRaplinka2" index="42"]
+[node name="Icosphere_013" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.744684, 0.08974955, 6.5025625)
 mesh = SubResource("ArrayMesh_6s2s2")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_013" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_013"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_013/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_013/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_p7mkf")
 
-[node name="Icosphere_014" type="MeshInstance3D" parent="VRaplinka2" index="43"]
+[node name="Icosphere_014" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.279301, 0.25009882, 8.351915)
 mesh = SubResource("ArrayMesh_jktgo")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_014" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_014"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_014/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_014/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_7c7s3")
 
-[node name="Sphere_003" type="MeshInstance3D" parent="VRaplinka2" index="44"]
+[node name="Sphere_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.77352, 0.22420396, -20.760204)
 mesh = SubResource("ArrayMesh_4b2p6")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Sphere_003" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Sphere_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Sphere_003/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sphere_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_l0eug")
 
-[node name="Icosphere_015" type="MeshInstance3D" parent="VRaplinka2" index="45"]
+[node name="Icosphere_015" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.43683, -1.3510754, -20.39016)
 mesh = SubResource("ArrayMesh_2ymn4")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_015" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_015"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_015/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_015/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_7bt7k")
 
-[node name="Icosphere_016" type="MeshInstance3D" parent="VRaplinka2" index="46"]
+[node name="Icosphere_016" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27375793, -0.89865595, 0.26607895)
 mesh = SubResource("ArrayMesh_4vtch")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_016" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_016"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_016/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_016/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_43vp0")
 
-[node name="Icosphere_017" type="MeshInstance3D" parent="VRaplinka2" index="47"]
+[node name="Icosphere_017" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4204884, -0.6354193, 5.8990383)
 mesh = SubResource("ArrayMesh_4yvcg")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_017" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_017"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_017/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_017/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_0v8tm")
 
-[node name="Icosphere_018" type="MeshInstance3D" parent="VRaplinka2" index="48"]
+[node name="Icosphere_018" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9575806, -0.6354193, 8.707819)
 mesh = SubResource("ArrayMesh_ycv17")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_018" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_018"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_018/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_018/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_fl4op")
 
-[node name="Icosphere_019" type="MeshInstance3D" parent="VRaplinka2" index="49"]
+[node name="Icosphere_019" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.880871, -1.3510754, -12.666014)
 mesh = SubResource("ArrayMesh_32ygj")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_019" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_019"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_019/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_019/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_jl04y")
 
-[node name="Icosphere_023" type="MeshInstance3D" parent="VRaplinka2" index="50"]
+[node name="Icosphere_023" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.027597, -0.6354193, -8.02783)
 mesh = SubResource("ArrayMesh_b4lxb")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_023" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_023"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_023/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_023/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ccejf")
 
-[node name="Icosphere_028" type="MeshInstance3D" parent="VRaplinka2" index="51"]
+[node name="Icosphere_028" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.751406, 0.95590985, -4.6384625)
 mesh = SubResource("ArrayMesh_xxl7c")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_028" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_028"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_028/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_028/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_p3d5v")
 
-[node name="Icosphere_001_Icosphere_001" type="MeshInstance3D" parent="VRaplinka2" index="52"]
+[node name="Icosphere_001_Icosphere_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.612635, 0, 3.5556846)
 mesh = SubResource("ArrayMesh_bm4sh")
 skeleton = NodePath("")
 
-[node name="Cylinder_016" type="MeshInstance3D" parent="VRaplinka2/Icosphere_001_Icosphere_001" index="0"]
+[node name="Cylinder_016" type="MeshInstance3D" parent="Icosphere_001_Icosphere_001"]
 mesh = SubResource("ArrayMesh_rish1")
 skeleton = NodePath("")
 
-[node name="Icosphere_Icosphere_001" type="MeshInstance3D" parent="VRaplinka2/Icosphere_001_Icosphere_001/Cylinder_016" index="0"]
+[node name="Icosphere_Icosphere_001" type="MeshInstance3D" parent="Icosphere_001_Icosphere_001/Cylinder_016"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.861023e-06, 0, 0)
 mesh = SubResource("ArrayMesh_end8d")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_001_Icosphere_001" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_001_Icosphere_001"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_001_Icosphere_001/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_001_Icosphere_001/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_p46ah")
 
-[node name="Icosphere_001_Icosphere_002" type="MeshInstance3D" parent="VRaplinka2" index="53"]
+[node name="Icosphere_001_Icosphere_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.35593, 0.6673591, -15.137267)
 mesh = SubResource("ArrayMesh_mi2k0")
 skeleton = NodePath("")
 
-[node name="Cylinder_017" type="MeshInstance3D" parent="VRaplinka2/Icosphere_001_Icosphere_002" index="0"]
+[node name="Cylinder_017" type="MeshInstance3D" parent="Icosphere_001_Icosphere_002"]
 mesh = SubResource("ArrayMesh_4pscy")
 skeleton = NodePath("")
 
-[node name="Icosphere_Icosphere_003" type="MeshInstance3D" parent="VRaplinka2/Icosphere_001_Icosphere_002/Cylinder_017" index="0"]
+[node name="Icosphere_Icosphere_003" type="MeshInstance3D" parent="Icosphere_001_Icosphere_002/Cylinder_017"]
 mesh = SubResource("ArrayMesh_vpg2l")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/Icosphere_001_Icosphere_002" index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Icosphere_001_Icosphere_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/Icosphere_001_Icosphere_002/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Icosphere_001_Icosphere_002/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_oms46")
 
-[node name="birdhouse" type="MeshInstance3D" parent="VRaplinka2" index="54"]
+[node name="birdhouse" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.551981, 1.2813563, -6.0659633)
 mesh = SubResource("ArrayMesh_dotl4")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="VRaplinka2/birdhouse" index="0"]
+[node name="StaticBody3D" type="StaticBody3D" parent="birdhouse"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRaplinka2/birdhouse/StaticBody3D" index="0"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="birdhouse/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sfbhn")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="3"]
-environment = SubResource("Environment_6hthj")
-
-[node name="VRaplinka" parent="." index="4" instance=ExtResource("5_6wh46")]
-transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, -0.01906395, 0, 0.0023059845)
-
-[node name="axe2" parent="." index="5" instance=ExtResource("6_ktwt8")]
-transform = Transform3D(-0.008993257, -0.14459488, -0.9894501, -0.99807143, 0.062076285, 0, 0.061421387, 0.98754185, -0.14487427, -2.9108365, 1.0370002, 8.561302)
-
-[node name="fireparticles" parent="." index="6" instance=ExtResource("7_fyqd8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.360335, 0.38178587, 13.703032)

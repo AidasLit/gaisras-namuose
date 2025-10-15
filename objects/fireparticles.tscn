@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ikydy4ndkx7b"]
 
-[ext_resource type="Texture2D" uid="uid://mtxuiyci1sab" path="res://textures/pngimg.com - smoke_PNG55220.png" id="1_uv8v3"]
+[ext_resource type="Texture2D" uid="uid://mtxuiyci1sab" path="res://assets/textures/pngimg.com - smoke_PNG55220.png" id="1_uv8v3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_772fe"]
 transparency = 1
