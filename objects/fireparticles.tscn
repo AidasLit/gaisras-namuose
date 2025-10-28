@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://ikydy4ndkx7b"]
+[gd_scene load_steps=18 format=3 uid="uid://ikydy4ndkx7b"]
 
+[ext_resource type="Script" uid="uid://bjkun6q3salmi" path="res://Scripts/fireparticles.gd" id="1_eb8px"]
 [ext_resource type="Texture2D" uid="uid://mtxuiyci1sab" path="res://assets/textures/pngimg.com - smoke_PNG55220.png" id="1_uv8v3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_772fe"]
@@ -45,7 +46,38 @@ emission = Color(1.0401094, 0.86946625, 0, 1)
 emission_energy_multiplier = 2.0
 billboard_mode = 1
 
-[node name="fireparticles" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_eb8px"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eb8px"]
+
+[sub_resource type="Curve" id="Curve_833ms"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_y28dn"]
+curve = SubResource("Curve_833ms")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0dytu"]
+direction = Vector3(0, 1, 0)
+spread = 30.0
+initial_velocity_min = 3.0
+initial_velocity_max = 8.0
+gravity = Vector3(0, 3, 0)
+scale_curve = SubResource("CurveTexture_y28dn")
+color_ramp = SubResource("GradientTexture1D_eb8px")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whtsv"]
+transparency = 1
+albedo_texture = ExtResource("1_uv8v3")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+billboard_mode = 1
+
+[sub_resource type="QuadMesh" id="QuadMesh_qhebr"]
+material = SubResource("StandardMaterial3D_whtsv")
+
+[node name="fireparticles" type="Node3D" groups=["Fire"]]
+script = ExtResource("1_eb8px")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 material_override = SubResource("StandardMaterial3D_772fe")
@@ -59,3 +91,16 @@ amount = 15
 lifetime = 2.0
 process_material = SubResource("ParticleProcessMaterial_msgjs")
 draw_pass_1 = SubResource("QuadMesh_6ld26")
+
+[node name="FireHit" type="Area3D" parent="."]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FireHit"]
+shape = SubResource("BoxShape3D_eb8px")
+
+[node name="Steam" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_0dytu")
+draw_pass_1 = SubResource("QuadMesh_qhebr")
