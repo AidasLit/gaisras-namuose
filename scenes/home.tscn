@@ -1,18 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dr3kqc5vp636u"]
+[gd_scene load_steps=7 format=3 uid="uid://dr3kqc5vp636u"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_krot7"]
 [ext_resource type="PackedScene" uid="uid://btj2d3w2j3s52" path="res://scenes/v_raplinka_2.tscn" id="2_u4wd2"]
 [ext_resource type="PackedScene" uid="uid://boy2l5mst2yiw" path="res://objects/axe.tscn" id="3_w18ys"]
 [ext_resource type="PackedScene" uid="uid://ikydy4ndkx7b" path="res://objects/fireparticles.tscn" id="4_reixx"]
 [ext_resource type="PackedScene" uid="uid://w7vdxtmpdcu3" path="res://objects/teleporter.tscn" id="5_uhids"]
+[ext_resource type="PackedScene" uid="uid://bfck323q2jmq4" path="res://objects/fire extinguisher.tscn" id="6_yxilm"]
 
 [node name="MyBase" instance=ExtResource("1_krot7")]
+
+[node name="XRCamera3D" parent="XROrigin3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4957645, 0)
 
 [node name="VRaplinka2" parent="." index="3" instance=ExtResource("2_u4wd2")]
 visible = true
 
 [node name="Axe" parent="." index="4" instance=ExtResource("3_w18ys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032761157, 1.6499436, -6.371488)
+transform = Transform3D(-0.017362576, 0.926149, 0.3767578, -0.9998243, -0.01874377, 0, 0.007061863, -0.37669164, 0.9263118, 0.5963344, 1.0578662, -5.6390867)
 
 [node name="fireparticles" parent="." index="5" instance=ExtResource("4_reixx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.989983, 0, 16.394886)
@@ -24,3 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.90958, 0, 0)
 zone_scene = "uid://kuhspx305dlb"
 display_name = "House"
 spawn_node_name = "Spawn"
+
+[node name="fire extinguisher" parent="." index="8" instance=ExtResource("6_yxilm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16093433, 0.9193537, -5.4571238)
