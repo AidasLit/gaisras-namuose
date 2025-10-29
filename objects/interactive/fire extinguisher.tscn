@@ -44,6 +44,7 @@ script = ExtResource("2_7ofeo")
 particles_path = NodePath("Nozzle/SprayParticles")
 spray_area_path = NodePath("Nozzle/SprayArea")
 spray_power_per_sec = 0.8
+press_to_hold = false
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(-1.4, 0, -1.2239188e-07, 0, 1.4, 0, 1.2239188e-07, 0, -1.4, 0, -0.09237063, 0)

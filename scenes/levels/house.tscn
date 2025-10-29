@@ -1,11 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://kuhspx305dlb"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_g6yoe"]
-[ext_resource type="PackedScene" uid="uid://bcpfvsw1yj437" path="res://assets/scenes/namas.blend" id="2_g6yoe"]
+[ext_resource type="PackedScene" uid="uid://iqayr6jel37r" path="res://objects/static/namas.tscn" id="2_g6yoe"]
 
 [node name="MyBase" instance=ExtResource("1_g6yoe")]
 
-[node name="namas" parent="." index="3" instance=ExtResource("2_g6yoe")]
+[node name="Spawn" type="Marker3D" parent="." index="3"]
 
-[node name="Spawn" type="Marker3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.530709, 0)
+[node name="namas" parent="." index="4" instance=ExtResource("2_g6yoe")]

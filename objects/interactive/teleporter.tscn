@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://w7vdxtmpdcu3"]
 
-[ext_resource type="Script" uid="uid://byyl2usgs2bv3" path="res://objects/teleporter.gd" id="1_o1i3d"]
+[ext_resource type="Script" uid="uid://byyl2usgs2bv3" path="res://objects/interactive/teleporter.gd" id="1_o1i3d"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_omc33"]
 height = 2.5
