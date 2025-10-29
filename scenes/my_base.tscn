@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://ciq6xarlvw2hj" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="3_c4hl7"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_6woui"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="5_skk58"]
-[ext_resource type="PackedScene" uid="uid://xe8wd5yp6qqf" path="res://scenes/wrist_ui.tscn" id="5_wwvrp"]
+[ext_resource type="PackedScene" uid="uid://xe8wd5yp6qqf" path="res://scenes/interfaces/wrist_ui.tscn" id="5_wwvrp"]
 [ext_resource type="Script" uid="uid://iyw6scisivrv" path="res://addons/godot-xr-tools/player/player_body.gd" id="6_wmdd0"]
 [ext_resource type="Script" uid="uid://gkvcbgar2tv2" path="res://addons/godot-xr-tools/overrides/ground_physics_settings.gd" id="7_raqsb"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_skk58"]

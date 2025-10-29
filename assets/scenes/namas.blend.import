@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dimsev1ghun7u"
-path="res://.godot/imported/namas.blend-70c181f1f59f9f4d06b6b04d5fb4e9b0.scn"
+uid="uid://bcpfvsw1yj437"
+path="res://.godot/imported/namas.blend-66a2add678637fbcb3d4adc30a11d92f.scn"
 
 [deps]
 
-source_file="res://assets/models/namas.blend"
-dest_files=["res://.godot/imported/namas.blend-70c181f1f59f9f4d06b6b04d5fb4e9b0.scn"]
+source_file="res://assets/scenes/namas.blend"
+dest_files=["res://.godot/imported/namas.blend-66a2add678637fbcb3d4adc30a11d92f.scn"]
 
 [params]
 

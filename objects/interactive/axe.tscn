@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_kbfqi"]
 [ext_resource type="Script" uid="uid://dk8d5h7xuai47" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="2_30cbo"]
-[ext_resource type="Script" uid="uid://m478kdxvj7vg" path="res://objects/axe.gd" id="2_70obf"]
+[ext_resource type="Script" uid="uid://m478kdxvj7vg" path="res://objects/interactive/axe.gd" id="2_70obf"]
 [ext_resource type="Animation" uid="uid://ccds2u22gbxn7" path="res://addons/godot-xr-tools/hands/animations/right/Grip.res" id="4_ajxl0"]
 [ext_resource type="Animation" uid="uid://s1vqcxyqcvea" path="res://addons/godot-xr-tools/hands/animations/right/Grip 5.res" id="5_p0rfu"]
 [ext_resource type="Script" uid="uid://bmmy3becwkker" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="6_rxrkx"]
