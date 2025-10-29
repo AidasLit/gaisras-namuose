@@ -3617,7 +3617,6 @@ data = PackedVector3Array(0, 0.0374, 0.0862, -0.0022, 0.0378, 0.1275, 0, 0.0374,
 
 [node name="VRaplinka2" type="Node3D"]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
-visible = false
 
 [node name="Table_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37924382, 0, -4.914161)
