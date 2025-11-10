@@ -1,13 +1,23 @@
 extends Node3D
 class_name Fire
 
-@export var intensity: float = 1.0   # 1..0
+@export var hitbox : CollisionShape3D
+@export var intensity: float = 1.0 : 
+	set(value):
+		intensity = value
+
 @onready var p1: GPUParticles3D = $GPUParticles3D
 @onready var p2: GPUParticles3D = $GPUParticles3D2
 @onready var steam: GPUParticles3D = $Steam   # continuous steam while spraying
+@onready var collision_shape_3d: CollisionShape3D = $FireHit/CollisionShape3D
+
 
 func _ready() -> void:
-	add_to_group("Fire")
+	assert(p1.process_material.emission_point_texture, "Emission point texture not set for the fire")
+	assert(hitbox, "No hitbox selected for fire")
+	
+	collision_shape_3d.shape = hitbox.shape
+	
 	_apply_visuals()
 
 # Called each frame the extinguisher hits this fire (amount is delta-scaled)

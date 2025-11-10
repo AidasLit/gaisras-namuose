@@ -7,17 +7,14 @@
 transparency = 1
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_uv8v3")
-emission_enabled = true
 emission = Color(1.0401094, 0.86946625, 0, 1)
 emission_energy_multiplier = 2.0
 billboard_mode = 1
 
-[sub_resource type="Gradient" id="Gradient_uv8v3"]
-offsets = PackedFloat32Array(0, 0.5073892, 1)
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+[sub_resource type="Gradient" id="Gradient_ds3qr"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_772fe"]
-gradient = SubResource("Gradient_uv8v3")
+gradient = SubResource("Gradient_ds3qr")
 
 [sub_resource type="Curve" id="Curve_msgjs"]
 _data = [Vector2(0.013100438, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -27,9 +24,8 @@ point_count = 2
 curve = SubResource("Curve_msgjs")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_msgjs"]
-emission_shape_scale = Vector3(0.2, 0.2, 0.2)
-emission_shape = 1
-emission_sphere_radius = 1.0
+emission_shape = 5
+emission_point_count = 512
 gravity = Vector3(0, 2, 0)
 scale_curve = SubResource("CurveTexture_6ld26")
 color_ramp = SubResource("GradientTexture1D_772fe")
@@ -76,16 +72,19 @@ billboard_mode = 1
 [sub_resource type="QuadMesh" id="QuadMesh_qhebr"]
 material = SubResource("StandardMaterial3D_whtsv")
 
-[node name="fireparticles" type="Node3D" groups=["Fire"]]
+[node name="fireparticles" type="Node3D" groups=["fire"]]
 script = ExtResource("1_eb8px")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 material_override = SubResource("StandardMaterial3D_772fe")
+amount = 10
 lifetime = 1.5
+fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_msgjs")
 draw_pass_1 = SubResource("QuadMesh_6ld26")
 
 [node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+visible = false
 material_override = SubResource("StandardMaterial3D_myxf4")
 amount = 15
 lifetime = 2.0

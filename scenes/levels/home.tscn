@@ -30,3 +30,6 @@ spawn_node_name = "Spawn"
 
 [node name="fire extinguisher" parent="." index="8" instance=ExtResource("6_lqded")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7893505, 0.9193537, 6.1235237)
+
+[editable path="VRaplinka"]
+[editable path="fireparticles"]
