@@ -30,6 +30,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 movement_providers=""
 player_body=""
 fire=""
+spray=""
 
 [input]
 
