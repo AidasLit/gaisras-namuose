@@ -5,6 +5,4 @@
 
 [node name="MyBase" instance=ExtResource("1_g6yoe")]
 
-[node name="Spawn" type="Marker3D" parent="." index="3"]
-
-[node name="namas" parent="." index="4" instance=ExtResource("2_g6yoe")]
+[node name="namas" parent="." index="3" instance=ExtResource("2_g6yoe")]

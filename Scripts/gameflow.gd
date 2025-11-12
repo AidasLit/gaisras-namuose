@@ -1,7 +1,7 @@
 extends Node
 class_name GameFlow
 
-const home : String = "uid://dr3kqc5vp636u"
+const home_scene : String = "uid://dr3kqc5vp636u"
 
 enum LevelType{
 	None = 0,
@@ -22,14 +22,12 @@ const objectives = [
 ]
 
 @export var type : LevelType = LevelType.None
-@export var world_objects : Node
 
 var state = LevelState.None
 var objective : String
 
+
 func _ready() -> void:
-	#assert(world_objects)
-	
 	match type:
 		LevelType.None:
 			objective = ""
@@ -38,6 +36,7 @@ func _ready() -> void:
 			objective = objectives[1]
 			state = LevelState.InProgress
 			SignalBus.fire_extinguished.connect(fires_update)
+			fires_update()
 		LevelType.SaveObject:
 			objective = objectives[2]
 			state = LevelState.InProgress
@@ -48,6 +47,8 @@ func fires_update():
 		change_state(LevelState.Finished)
 	else:
 		objective = objectives[1] + "\nFires left: " + str(fires.size())
+	
+	SignalBus.flow_update.emit()
 
 func change_state(new_state: LevelState):
 	match new_state:
@@ -65,4 +66,6 @@ func change_state(new_state: LevelState):
 			await get_tree().create_timer(5.0).timeout
 			
 			# Request loading the next scene
-			scene_base.load_scene("res://scenes/home.tscn")
+			scene_base.load_scene(home_scene)
+	
+	SignalBus.state_change.emit()

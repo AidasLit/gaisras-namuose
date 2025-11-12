@@ -17,7 +17,6 @@ var spray_angle = 0.2
 const particle_scale = [Vector3.ONE * 0.1, Vector3.ONE * 1.0]
 
 signal water_emitted
-var active_controller : XRController3D
 var pressed = false
 
 func _ready():

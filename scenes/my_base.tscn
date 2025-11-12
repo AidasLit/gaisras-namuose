@@ -53,9 +53,9 @@ metadata/_custom_type_script = "uid://ciq6xarlvw2hj"
 [node name="LeftHand" parent="XROrigin3D/LeftHand" index="2" instance=ExtResource("4_6woui")]
 
 [node name="Viewport2Din3D" parent="XROrigin3D/LeftHand" index="3" instance=ExtResource("5_wwvrp")]
-transform = Transform3D(-3.496911e-09, -0.08, -3.496911e-09, 0, -3.496911e-09, 0.08, -0.08, 3.496911e-09, 1.5285484e-16, -0.041925013, -0.0493623, 0.30986825)
+transform = Transform3D(-3.496911e-09, -0.08, -3.496911e-09, 0, -3.496911e-09, 0.08, -0.08, 3.496911e-09, 1.5285484e-16, -0.2560172, -0.0493623, 0.1498608)
+screen_size = Vector2(9, 4.5)
 collision_layer = 5242880
-scene_properties_keys = PackedStringArray("wrist_control.gd")
 
 [node name="XRToolsFunctionPickup" type="Node3D" parent="XROrigin3D/RightHand" index="0"]
 script = ExtResource("3_c4hl7")

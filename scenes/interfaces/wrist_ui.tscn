@@ -7,13 +7,13 @@
 resource_local_to_scene = true
 size = Vector2(3, 1.5)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_neryx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_hx4ub"]
 viewport_path = NodePath("Viewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdbgv"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hx4ub"]
 transparency = 1
 cull_mode = 2
-albedo_texture = SubResource("ViewportTexture_neryx")
+albedo_texture = SubResource("ViewportTexture_hx4ub")
 texture_filter = 1
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_41l0l"]
@@ -24,6 +24,7 @@ size = Vector3(3, 1.5, 0.02)
 screen_size = Vector2(3, 1.5)
 scene = ExtResource("2_qjjfv")
 viewport_size = Vector2(1152, 576)
+scene_properties_keys = PackedStringArray("wrist_control.gd")
 
 [node name="Viewport" parent="." index="0"]
 size = Vector2i(1152, 576)
@@ -31,7 +32,7 @@ size_2d_override_stretch = true
 
 [node name="Screen" parent="." index="1"]
 mesh = SubResource("QuadMesh_2f8gq")
-surface_material_override/0 = SubResource("StandardMaterial3D_cdbgv")
+surface_material_override/0 = SubResource("StandardMaterial3D_hx4ub")
 
 [node name="StaticBody3D" parent="." index="2"]
 screen_size = Vector2(3, 1.5)

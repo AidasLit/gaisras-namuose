@@ -20,6 +20,7 @@ var water_container : WaterHose
 func _ready() -> void:
 	quit_button.pressed.connect(quit)
 	home_button.pressed.connect(home)
+	SignalBus.flow_update.connect(update_game_flow)
 	
 	update_water_container()
 	update_game_flow()
@@ -41,11 +42,15 @@ func update_water():
 
 func update_game_flow():
 	if gameflow:
-		if gameflow.state == gameflow.LevelState.InProgress:
-			update_objective(gameflow.objective)
-			text_control.show()
-		else:
-			text_control.hide()
+		match gameflow.state:
+			gameflow.LevelState.InProgress:
+				update_objective(gameflow.objective)
+				text_control.show()
+			gameflow.LevelState.Finished:
+				update_objective("Level done!")
+				text_control.show()
+			_:
+				text_control.hide()
 
 func update_objective(objective : String):
 	label.text = "Current objective:\n" + objective

@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://ikv6b8n00bjd"]
 
 [ext_resource type="Script" uid="uid://dl3s7n3r6cwfe" path="res://objects/utils/spray_particle.gd" id="1_67igq"]
-[ext_resource type="Shader" uid="uid://petbcanufqq7" path="res://objects/utils/spray_particle.gdshader" id="1_succv"]
+[ext_resource type="Shader" uid="uid://petbcanufqq7" path="res://resources/spray_particle.gdshader" id="1_succv"]
 [ext_resource type="Texture2D" uid="uid://mtxuiyci1sab" path="res://assets/textures/pngimg.com - smoke_PNG55220.png" id="2_67igq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g2byt"]
