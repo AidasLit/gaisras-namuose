@@ -11,23 +11,17 @@
 [node name="XRCamera3D" parent="XROrigin3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4957645, 0)
 
-[node name="Viewport2Din3D" parent="XROrigin3D/LeftHand" index="3" node_paths=PackedStringArray("water_container")]
-scene_properties_keys = PackedStringArray("wrist_control.gd", "water_container")
-water_container = NodePath("../../../Water hose")
-
 [node name="VRaplinka" parent="." index="3" instance=ExtResource("2_d1b6h")]
 
 [node name="Axe" parent="." index="4" instance=ExtResource("3_cchwu")]
 transform = Transform3D(-0.017362576, 0.926149, 0.3767578, -0.9998243, -0.01874377, 0, 0.007061863, -0.37669164, 0.9263118, -2.2829657, 0.78775537, 7.055348)
 
-[node name="Spawn" type="Marker3D" parent="." index="5"]
-
-[node name="Teleporter" parent="." index="6" instance=ExtResource("5_58gng")]
+[node name="Teleporter" parent="." index="5" instance=ExtResource("5_58gng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.90958, 0, 0)
-zone_scene = "uid://kuhspx305dlb"
-display_name = "House"
+zone_scene = "uid://dis17812vl16"
+display_name = "Testing"
 
-[node name="Water hose" parent="." index="7" instance=ExtResource("6_yskkl")]
+[node name="Water hose" parent="." index="6" instance=ExtResource("6_yskkl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8573685, 1.1639831, 5.905587)
 
 [editable path="VRaplinka"]

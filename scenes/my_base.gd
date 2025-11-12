@@ -20,6 +20,8 @@ func item_pickup(item : XRToolsPickable, hand : int):
 	held_items[hand] = item
 	
 	if item is WaterHose:
+		item.active = true
+		
 		var menu : WristControl = left_hand_menu.get_scene_instance()
 		menu.water_container = item
 		menu.update_water_container()
@@ -28,6 +30,8 @@ func item_drop(hand : int):
 	var item = held_items[hand]
 	
 	if item is WaterHose:
+		item.active = false
+		
 		var menu : WristControl = left_hand_menu.get_scene_instance()
 		menu.water_container = null
 		menu.update_water_container()

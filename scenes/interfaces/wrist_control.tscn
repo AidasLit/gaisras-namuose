@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxmh1y8vki7xh"]
+[gd_scene load_steps=9 format=3 uid="uid://dxmh1y8vki7xh"]
 
 [ext_resource type="Texture2D" uid="uid://2w3n0gts7byu" path="res://assets/textures/exit.png" id="1_b2chq"]
 [ext_resource type="Script" uid="uid://b3do5tl8ks45b" path="res://scenes/interfaces/wrist_control.gd" id="1_yl6a8"]
@@ -6,6 +6,15 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfxwl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1bw3"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0.09803922, 0.09803922, 0.09803922, 0.5882353)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lfxwl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pde0"]
 content_margin_left = 2.0
@@ -41,19 +50,22 @@ script = ExtResource("1_yl6a8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+[node name="TextControl" type="PanelContainer" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_styles/panel = SubResource("StyleBoxFlat_q1bw3")
 
-[node name="Panel" type="Panel" parent="VBoxContainer/MarginContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer/TextControl"]
 layout_mode = 2
-
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2/Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "bbvcb"
+theme_override_font_sizes/font_size = 16
+text = "Current objective:
+Do a thing"
+label_settings = SubResource("LabelSettings_lfxwl")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Water control" type="MarginContainer" parent="VBoxContainer"]
 layout_mode = 2

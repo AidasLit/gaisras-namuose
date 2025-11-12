@@ -22,11 +22,13 @@ extends StaticBody3D
 	set(value):
 		intensity = value
 		if intensity > 0:
+			fire.emitting = true
 			burning = true
 			
 			### Handle fire intensity logic here. For now just adjusting fire particles
 			fire.amount_ratio = intensity * 1.0 / max_particles
 		else:
+			fire.emitting = false
 			burning = false
 
 ### breaking system

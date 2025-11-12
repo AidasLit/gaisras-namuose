@@ -85,3 +85,5 @@ environment = SubResource("Environment_6hthj")
 
 [node name="GameFlow" type="Node" parent="." index="3"]
 script = ExtResource("12_wwvrp")
+
+[node name="Spawn" type="Marker3D" parent="." index="4"]

@@ -5,6 +5,8 @@ class_name WaterHose
 @onready var nozzle_from: Marker3D = $"Nozzle from"
 @onready var nozzle_to: Marker3D = $"Nozzle to"
 
+var active : bool = false
+
 var max_capacity : int = 2000
 var current_capacity : int = max_capacity
 
@@ -25,9 +27,12 @@ func _input(event: InputEvent) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	if not active:
+		return
+	
 	if Input.is_action_pressed("spray"):
 		if current_capacity > 0:
-			time_counter += 200  * delta
+			time_counter += 20  * delta
 	
 	while(time_counter >= 1):
 		time_counter -= 1;
