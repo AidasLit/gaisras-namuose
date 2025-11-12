@@ -15,8 +15,6 @@ class_name WristControl
 var gameflow : GameFlow
 var water_container : WaterHose
 
-### TODO text size doesnt change
-
 func _ready() -> void:
 	quit_button.pressed.connect(quit)
 	home_button.pressed.connect(home)
