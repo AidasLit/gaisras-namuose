@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://c6emy0isr77oa"]
+[gd_scene load_steps=18 format=3 uid="uid://c6emy0isr77oa"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_2b7op"]
+[ext_resource type="Script" uid="uid://bp0n4fm33xdfk" path="res://scenes/my_base.gd" id="2_c4hl7"]
 [ext_resource type="Script" uid="uid://bpmodm04r80w6" path="res://addons/godot-xr-tools/functions/movement_direct.gd" id="2_wwvrp"]
 [ext_resource type="Script" uid="uid://ciq6xarlvw2hj" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="3_c4hl7"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_6woui"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_skk58"]
 [ext_resource type="Material" path="res://addons/godot-xr-tools/materials/pointer.tres" id="8_skk58"]
 [ext_resource type="Material" path="res://addons/godot-xr-tools/materials/target.tres" id="9_wmdd0"]
+[ext_resource type="Script" uid="uid://bp6uhl01ho6ds" path="res://Scripts/gameflow.gd" id="12_wwvrp"]
 
 [sub_resource type="Resource" id="Resource_ljivr"]
 script = ExtResource("7_raqsb")
@@ -36,6 +38,7 @@ fog_depth_curve = 2.3784142
 fog_depth_end = 30.0
 
 [node name="MyBase" instance=ExtResource("1_2b7op")]
+script = ExtResource("2_c4hl7")
 
 [node name="Walking" type="Node" parent="XROrigin3D/LeftHand" index="0" groups=["movement_providers"]]
 script = ExtResource("2_wwvrp")
@@ -79,3 +82,8 @@ transform = Transform3D(0.9569505, 0.2844989, -0.05749942, 0, 0.19810219, 0.9801
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 environment = SubResource("Environment_6hthj")
+
+[node name="GameFlow" type="Node" parent="." index="3"]
+script = ExtResource("12_wwvrp")
+
+[node name="Spawn" type="Marker3D" parent="." index="4"]

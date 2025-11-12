@@ -9,7 +9,7 @@ extends Node3D
 @export var enabled : bool = true
 
 ## Name of the spawn-point node name in the target scene
-@export var spawn_node_name := ""
+@export var spawn_node_name : String = "Spawn"
 
 @onready var area_3d: Area3D = $Area3D
 @onready var label_3d: Label3D = $Label3D

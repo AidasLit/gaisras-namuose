@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dis17812vl16"]
+
+[ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_d2diq"]
+[ext_resource type="PackedScene" uid="uid://bwj74du8g5ofy" path="res://objects/interactive/water_hose.tscn" id="2_7gx67"]
+[ext_resource type="PackedScene" uid="uid://c613mfb23n72f" path="res://objects/static/tree.tscn" id="3_tlwmi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7gx67"]
+size = Vector3(20, 2, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d2diq"]
+data = PackedVector3Array(-10, 1, 10, 10, 1, 10, -10, -1, 10, 10, 1, 10, 10, -1, 10, -10, -1, 10, 10, 1, -10, -10, 1, -10, 10, -1, -10, -10, 1, -10, -10, -1, -10, 10, -1, -10, 10, 1, 10, 10, 1, -10, 10, -1, 10, 10, 1, -10, 10, -1, -10, 10, -1, 10, -10, 1, -10, -10, 1, 10, -10, -1, -10, -10, 1, 10, -10, -1, 10, -10, -1, -10, 10, 1, 10, -10, 1, 10, 10, 1, -10, -10, 1, 10, -10, 1, -10, 10, 1, -10, -10, -1, 10, 10, -1, 10, -10, -1, -10, 10, -1, 10, 10, -1, -10, -10, -1, -10)
+
+[node name="MyBase" instance=ExtResource("1_d2diq")]
+
+[node name="GameFlow" parent="." index="3"]
+type = 1
+
+[node name="Floor" type="StaticBody3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" index="0"]
+mesh = SubResource("BoxMesh_7gx67")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" index="1"]
+shape = SubResource("ConcavePolygonShape3D_d2diq")
+
+[node name="Water hose" parent="." index="6" instance=ExtResource("2_7gx67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67682076, 0.52698463, -4.0457125)
+
+[node name="Tree" parent="." index="7" instance=ExtResource("3_tlwmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.7404804, -7)
+
+[node name="Tree2" parent="." index="8" instance=ExtResource("3_tlwmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.7404804, 6)
+
+[node name="Tree3" parent="." index="9" instance=ExtResource("3_tlwmi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2.7404804, 3)

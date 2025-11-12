@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dr3kqc5vp636u"]
+[gd_scene load_steps=6 format=3 uid="uid://dr3kqc5vp636u"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_yskkl"]
 [ext_resource type="PackedScene" uid="uid://8mtn78v107vf" path="res://objects/static/laukas.tscn" id="2_d1b6h"]
 [ext_resource type="PackedScene" uid="uid://boy2l5mst2yiw" path="res://objects/interactive/axe.tscn" id="3_cchwu"]
-[ext_resource type="PackedScene" uid="uid://ikydy4ndkx7b" path="res://objects/interactive/fireparticles.tscn" id="4_8768l"]
 [ext_resource type="PackedScene" uid="uid://w7vdxtmpdcu3" path="res://objects/interactive/teleporter.tscn" id="5_58gng"]
-[ext_resource type="PackedScene" uid="uid://bfck323q2jmq4" path="res://objects/interactive/fire extinguisher.tscn" id="6_lqded"]
+[ext_resource type="PackedScene" uid="uid://bwj74du8g5ofy" path="res://objects/interactive/water_hose.tscn" id="6_yskkl"]
 
 [node name="MyBase" instance=ExtResource("1_yskkl")]
 
@@ -17,16 +16,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4957645, 0)
 [node name="Axe" parent="." index="4" instance=ExtResource("3_cchwu")]
 transform = Transform3D(-0.017362576, 0.926149, 0.3767578, -0.9998243, -0.01874377, 0, 0.007061863, -0.37669164, 0.9263118, -2.2829657, 0.78775537, 7.055348)
 
-[node name="fireparticles" parent="." index="5" instance=ExtResource("4_8768l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.302465, 0, 10.462249)
-
-[node name="Spawn" type="Marker3D" parent="." index="6"]
-
-[node name="Teleporter" parent="." index="7" instance=ExtResource("5_58gng")]
+[node name="Teleporter" parent="." index="5" instance=ExtResource("5_58gng")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.90958, 0, 0)
-zone_scene = "uid://kuhspx305dlb"
-display_name = "House"
-spawn_node_name = "Spawn"
+zone_scene = "uid://dis17812vl16"
+display_name = "Testing"
 
-[node name="fire extinguisher" parent="." index="8" instance=ExtResource("6_lqded")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7893505, 0.9193537, 6.1235237)
+[node name="Water hose" parent="." index="6" instance=ExtResource("6_yskkl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8573685, 1.1639831, 5.905587)
+
+[editable path="VRaplinka"]

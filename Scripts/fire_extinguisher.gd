@@ -76,7 +76,7 @@ func _find_fire_root(n: Node) -> Node:
 	var cur: Node = n
 	while cur:
 		# prefer group match, fallback to method presence
-		if cur.is_in_group("Fire") or cur.has_method("apply_extinguish"):
+		if cur.is_in_group("fire") or cur.has_method("apply_extinguish"):
 			return cur
 		cur = cur.get_parent()
 	return null
