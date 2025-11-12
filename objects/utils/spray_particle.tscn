@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://mtxuiyci1sab" path="res://assets/textures/pngimg.com - smoke_PNG55220.png" id="2_67igq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g2byt"]
-radius = 0.4
+radius = 0.1
 
 [sub_resource type="QuadMesh" id="QuadMesh_succv"]
 
@@ -35,6 +35,7 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_g2byt")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_67igq"]
+resource_local_to_scene = true
 
 [node name="Spray particle" type="RigidBody3D"]
 mass = 0.01

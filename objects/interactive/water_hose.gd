@@ -60,12 +60,12 @@ func tween(particle: SprayParticle):
 		.set_ease(Tween.EASE_OUT)\
 		.set_trans(Tween.TRANS_SINE)
 	
-	size_tween.tween_property(particle.collision_shape_3d, "scale", particle_scale[1], particle.timer.wait_time) \
-		.from(particle_scale[0])
+	#size_tween.tween_property(particle.collision_shape_3d, "scale", particle_scale[1], particle.timer.wait_time) \
+		#.from(particle_scale[0])
 	size_tween.tween_property(particle.mesh_instance_3d, "scale", particle_scale[1], particle.timer.wait_time) \
 		.from(particle_scale[0])
-	size_tween.tween_property(particle.hit_box, "scale", particle_scale[1], particle.timer.wait_time) \
-		.from(particle_scale[0])
+	#size_tween.tween_property(particle.hit_box, "scale", particle_scale[1], particle.timer.wait_time) \
+		#.from(particle_scale[0])
 
 func randomise_direction():
 	var randomisation_vector = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized() * spray_angle
