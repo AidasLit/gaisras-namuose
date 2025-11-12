@@ -17,22 +17,28 @@ var spray_angle = 0.2
 const particle_scale = [Vector3.ONE * 0.1, Vector3.ONE * 1.0]
 
 signal water_emitted
+var active_controller : XRController3D
+var pressed = false
 
 func _ready():
 	super._ready()
 	
 	current_capacity = max_capacity
 
-func _input(event: InputEvent) -> void:
-	pass
+func action():
+	super.action()
+	pressed = true
+
+func action_release():
+	super.action_release()
+	pressed = false
 
 func _physics_process(delta: float) -> void:
-	if not active:
+	if not active or not pressed:
 		return
 	
-	if Input.is_action_pressed("spray"):
-		if current_capacity > 0:
-			time_counter += 20  * delta
+	if current_capacity > 0:
+		time_counter += 20  * delta
 	
 	while(time_counter >= 1):
 		time_counter -= 1;
