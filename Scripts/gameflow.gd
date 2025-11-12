@@ -1,6 +1,8 @@
 extends Node
 class_name GameFlow
 
+const home : String = "uid://dr3kqc5vp636u"
+
 enum LevelType{
 	None = 0,
 	ClearFire = 1,

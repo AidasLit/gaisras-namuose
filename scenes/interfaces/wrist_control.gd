@@ -15,11 +15,14 @@ class_name WristControl
 var gameflow : GameFlow
 var water_container : WaterHose
 
+### TODO text size doesnt change
+
 func _ready() -> void:
 	quit_button.pressed.connect(quit)
 	home_button.pressed.connect(home)
 	
 	update_water_container()
+	update_game_flow()
 
 func quit():
 	get_tree().quit()
@@ -38,10 +41,11 @@ func update_water():
 
 func update_game_flow():
 	if gameflow:
-		update_objective(gameflow.objective)
-		text_control.show()
-	else:
-		text_control.hide()
+		if gameflow.state == gameflow.LevelState.InProgress:
+			update_objective(gameflow.objective)
+			text_control.show()
+		else:
+			text_control.hide()
 
 func update_objective(objective : String):
 	label.text = "Current objective:\n" + objective

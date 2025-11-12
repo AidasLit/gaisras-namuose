@@ -3,8 +3,10 @@ extends XRToolsSceneBase
 
 @onready var left_pickup: XRToolsFunctionPickup = $XROrigin3D/LeftHand/XRToolsFunctionPickup
 @onready var right_pickup: XRToolsFunctionPickup = $XROrigin3D/RightHand/XRToolsFunctionPickup
-@onready var left_hand_menu: XRToolsViewport2DIn3D = $XROrigin3D/LeftHand/Viewport2Din3D
+@onready var left_hand_menu_thing: XRToolsViewport2DIn3D = $XROrigin3D/LeftHand/Viewport2Din3D
+@onready var game_flow: GameFlow = $GameFlow
 
+var left_hand_menu : WristControl
 var held_items : Array[XRToolsPickable] = [null, null]
 
 func _ready() -> void:
@@ -15,6 +17,10 @@ func _ready() -> void:
 	
 	left_pickup.has_dropped.connect(item_drop.bind(0))
 	right_pickup.has_dropped.connect(item_drop.bind(1))
+	
+	left_hand_menu = left_hand_menu_thing.get_scene_instance()
+	left_hand_menu.gameflow = game_flow
+	left_hand_menu.update_game_flow()
 
 func item_pickup(item : XRToolsPickable, hand : int):
 	held_items[hand] = item
@@ -22,9 +28,8 @@ func item_pickup(item : XRToolsPickable, hand : int):
 	if item is WaterHose:
 		item.active = true
 		
-		var menu : WristControl = left_hand_menu.get_scene_instance()
-		menu.water_container = item
-		menu.update_water_container()
+		left_hand_menu.water_container = item
+		left_hand_menu.update_water_container()
 
 func item_drop(hand : int):
 	var item = held_items[hand]
@@ -32,8 +37,7 @@ func item_drop(hand : int):
 	if item is WaterHose:
 		item.active = false
 		
-		var menu : WristControl = left_hand_menu.get_scene_instance()
-		menu.water_container = null
-		menu.update_water_container()
+		left_hand_menu.water_container = null
+		left_hand_menu.update_water_container()
 	
 	held_items[hand] = null

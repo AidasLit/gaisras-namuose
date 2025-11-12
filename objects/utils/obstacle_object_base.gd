@@ -8,6 +8,8 @@ extends StaticBody3D
 @export_group("Fire")
 @export_custom(PROPERTY_HINT_GROUP_ENABLE, "") var burnable = false
 
+### TODO particles move even with no velocity in a direction
+
 @export var burning = false : 
 	set(value):
 		burning = value
@@ -20,9 +22,14 @@ extends StaticBody3D
 @export var max_particles : int = 200
 @export var intensity : int = 100 :
 	set(value):
+		### TODO this shouldnt be neededwwwwasd
+		if not fire:
+			return
+		
 		intensity = value
 		if intensity > 0:
 			fire.emitting = true
+			
 			burning = true
 			
 			### Handle fire intensity logic here. For now just adjusting fire particles

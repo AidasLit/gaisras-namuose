@@ -60,7 +60,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_q1bw3")
 
 [node name="Label" type="Label" parent="VBoxContainer/TextControl"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 64
 text = "Current objective:
 Do a thing"
 label_settings = SubResource("LabelSettings_lfxwl")
