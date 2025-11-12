@@ -21,9 +21,7 @@ func _ready() -> void:
 func set_velocity(direction : Vector3):
 	linear_velocity = direction * forward_velocity
 
-### TODO WHY ARENT YOU WORKING
 func _on_body_entered(body):
-	print("collision")
 	if not body.is_in_group("fire"):
 		queue_free()
 

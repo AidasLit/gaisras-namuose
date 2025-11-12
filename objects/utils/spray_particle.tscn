@@ -39,6 +39,8 @@ resource_local_to_scene = true
 
 [node name="Spray particle" type="RigidBody3D"]
 mass = 0.01
+contact_monitor = true
+max_contacts_reported = 1
 linear_velocity = Vector3(50, 0, 0)
 script = ExtResource("1_67igq")
 
