@@ -9,12 +9,13 @@ extends StaticBody3D
 @export_custom(PROPERTY_HINT_GROUP_ENABLE, "") var burnable = false
 
 @export var burning = false : 
-	set(value): 
+	set(value):
 		burning = value
 		if value:
 			self.add_to_group("fire")
 		else:
 			self.remove_from_group("fire")
+			SignalBus.fire_extinguished.emit()
 
 @export var max_particles : int = 200
 @export var intensity : int = 100 :

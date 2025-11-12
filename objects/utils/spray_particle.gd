@@ -8,7 +8,7 @@ extends RigidBody3D
 @onready var hit_box: Area3D = $HitBox
 
 @export var spread_velocity = 0.2
-@export var forward_velocity = 20.0
+@export var forward_velocity = 10.0
 
 func _ready() -> void:
 	var rand_rotation = randf_range(0, PI)
@@ -18,8 +18,9 @@ func _ready() -> void:
 	#set_velocity()
 	hit_box.area_entered.connect(_on_area_entered)
 
-func set_velocity():
-	linear_velocity = Vector3(1.0, randf_range(-spread_velocity, spread_velocity), randf_range(-spread_velocity, spread_velocity)) * forward_velocity
+func set_velocity(direction : Vector3):
+	#linear_velocity = Vector3(1.0, randf_range(-spread_velocity, spread_velocity), randf_range(-spread_velocity, spread_velocity)) * forward_velocity
+	linear_velocity = direction * forward_velocity
 
 func _on_area_entered(area):
 	print("collision")
