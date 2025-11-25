@@ -54,13 +54,14 @@ func fires_update():
 
 func objects_update():
 	var objects = get_tree().get_nodes_in_group("rescue_targets")
+	print(objects)
 	if objects.is_empty():
 		change_state(LevelState.Finished)
 	else:
-		objective = objectives[2] + "\nFires left: " + str(objects.size())
+		objective = objectives[2]
 		for item in objects:
-			assert(item.name, "target object has no name")
-			objective += "\n" + str(item.name)
+			assert(item.target_name, "target object has no name")
+			objective += "\n" + str(item.target_name)
 	
 	SignalBus.flow_update.emit()
 

@@ -32,6 +32,7 @@ movement_providers=""
 player_body=""
 fire=""
 spray=""
+rescue_targets=""
 
 [input]
 
@@ -51,6 +52,7 @@ spray={
 3d_physics/layer_6="Burning Object"
 3d_physics/layer_7="Spray"
 3d_physics/layer_8="Breakable Object"
+3d_physics/layer_9="Rescue Target"
 3d_physics/layer_17="Held Objects"
 3d_physics/layer_18="Player Hands"
 3d_physics/layer_19="Grab Handles"

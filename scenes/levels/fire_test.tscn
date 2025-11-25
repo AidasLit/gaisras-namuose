@@ -1,14 +1,16 @@
-[gd_scene load_steps=12 format=4 uid="uid://dis17812vl16"]
+[gd_scene load_steps=14 format=4 uid="uid://dis17812vl16"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_d2diq"]
 [ext_resource type="PackedScene" uid="uid://bwj74du8g5ofy" path="res://objects/interactive/water_hose.tscn" id="2_7gx67"]
 [ext_resource type="PackedScene" uid="uid://c613mfb23n72f" path="res://objects/static/tree.tscn" id="3_tlwmi"]
+[ext_resource type="PackedScene" uid="uid://1oj1e1m7pal4" path="res://objects/interactive/human.tscn" id="4_1vmtn"]
+[ext_resource type="PackedScene" uid="uid://x1thu31dn035" path="res://objects/utils/rescue_area.tscn" id="5_ustps"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tlwmi"]
 size = Vector2(20, 20)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlwmi"]
-albedo_color = Color(0.049000014, 0.49, 0, 1)
+albedo_color = Color(0.49, 0, 0, 1)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d2diq"]
 data = PackedVector3Array(-10, 1, 10, 10, 1, 10, -10, -1, 10, 10, 1, 10, 10, -1, 10, -10, -1, 10, 10, 1, -10, -10, 1, -10, 10, -1, -10, -10, 1, -10, -10, -1, -10, 10, -1, -10, 10, 1, 10, 10, 1, -10, 10, -1, 10, 10, 1, -10, 10, -1, -10, 10, -1, 10, -10, 1, -10, -10, 1, 10, -10, -1, -10, -10, 1, 10, -10, -1, 10, -10, -1, -10, 10, 1, 10, -10, 1, 10, 10, 1, -10, -10, 1, 10, -10, 1, -10, 10, 1, -10, -10, -1, 10, 10, -1, 10, -10, -1, -10, 10, -1, 10, 10, -1, -10, -10, -1, -10)
@@ -85,7 +87,7 @@ data = PackedVector3Array(-1.0496, -0.1269, -0.3247, -1.0213, -0.0831, -0.2758, 
 [node name="MyBase" instance=ExtResource("1_d2diq")]
 
 [node name="GameFlow" parent="." index="3"]
-type = 1
+type = 2
 
 [node name="Floor" type="StaticBody3D" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -112,11 +114,21 @@ transform = Transform3D(-0.6219818, 0, -0.7830317, 0, 1, 0, 0.7830317, 0, -0.621
 transform = Transform3D(-0.444979, 0, 0.895541, 0, 1, 0, -0.895541, 0, -0.444979, -7, 3.7972693, 3)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.078436, 0.40595436, -3.6797087)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.313765, 0.41471016, -3.9236722)
 mesh = SubResource("ArrayMesh_tlwmi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.313765, 0.41471016, -3.9236722)
 shape = SubResource("ConcavePolygonShape3D_tlwmi")
+
+[node name="PickableObject" parent="." index="11" instance=ExtResource("4_1vmtn")]
+transform = Transform3D(-0.88094854, 0, 0.47321212, 0, 1, 0, -0.47321212, 0, -0.88094854, -1.4028032, 1.6966033, 7.068422)
+target_name = "Human one"
+
+[node name="Human" parent="." index="12" instance=ExtResource("4_1vmtn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.625326, 4.7683716e-07, -0.11617184)
+target_name = "Human pence"
+
+[node name="RescueArea" parent="." index="13" instance=ExtResource("5_ustps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.074893, 0, -6.902543)
