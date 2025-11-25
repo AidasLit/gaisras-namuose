@@ -112,7 +112,7 @@ collision_mode = 1
 collision_friction = 0.0
 collision_bounce = 0.0
 
-[node name="Obstacle object base" instance=ExtResource("1_2rhed")]
+[node name="house_coffie_table" instance=ExtResource("1_2rhed")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="HurtBox" index="0"]
@@ -125,4 +125,5 @@ shape = SubResource("ConcavePolygonShape3D_edsif")
 mesh = SubResource("ArrayMesh_lomxs")
 
 [node name="Fire" parent="." index="4"]
+emitting = false
 process_material = SubResource("ParticleProcessMaterial_bdv4e")
