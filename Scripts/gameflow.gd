@@ -18,7 +18,7 @@ enum LevelState{
 const objectives = [
 	"Objective complete",
 	"Extinguish all fires",
-	"Retrieve object: "
+	"Retrieve objects: "
 ]
 
 @export var type : LevelType = LevelType.None
@@ -40,6 +40,8 @@ func _ready() -> void:
 		LevelType.SaveObject:
 			objective = objectives[2]
 			state = LevelState.InProgress
+			SignalBus.object_rescued.connect(objects_update)
+			objects_update()
 
 func fires_update():
 	var fires = get_tree().get_nodes_in_group("fire")
@@ -47,6 +49,18 @@ func fires_update():
 		change_state(LevelState.Finished)
 	else:
 		objective = objectives[1] + "\nFires left: " + str(fires.size())
+	
+	SignalBus.flow_update.emit()
+
+func objects_update():
+	var objects = get_tree().get_nodes_in_group("rescue_targets")
+	if objects.is_empty():
+		change_state(LevelState.Finished)
+	else:
+		objective = objectives[2] + "\nFires left: " + str(objects.size())
+		for item in objects:
+			assert(item.name, "target object has no name")
+			objective += "\n" + str(item.name)
 	
 	SignalBus.flow_update.emit()
 
