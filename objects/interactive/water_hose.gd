@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if current_capacity > 0:
-		time_counter += 20  * delta
+		time_counter += 20 * delta
 	
 	while(time_counter >= 1):
 		time_counter -= 1;

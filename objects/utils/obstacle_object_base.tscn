@@ -40,6 +40,7 @@ collision_mask = 0
 
 [node name="Fire" type="GPUParticles3D" parent="."]
 material_override = SubResource("StandardMaterial3D_5fwoq")
+emitting = false
 amount = 200
 amount_ratio = 0.5
 lifetime = 3.0

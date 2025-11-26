@@ -17,7 +17,8 @@ extends StaticBody3D
 			self.remove_from_group("fire")
 			SignalBus.fire_extinguished.emit()
 
-@export var max_particles : int = 200
+# TODO rework this trash for easier level editing
+@export var max_particles : int = 100
 @export var intensity : int = 100 :
 	set(value):
 		### TODO this shouldnt be needed
@@ -31,7 +32,7 @@ extends StaticBody3D
 			burning = true
 			
 			### Handle fire intensity logic here. For now just adjusting fire particles
-			fire.amount_ratio = intensity * 1.0 / max_particles
+			fire.amount_ratio = intensity * 1.0 / 100
 		else:
 			fire.emitting = false
 			burning = false
@@ -51,7 +52,8 @@ var broken : bool = false
 			breakable = false
 
 func _ready() -> void:
-	pass
+	if self.burning:
+		fire.emitting = true
 
 func particle_hit():
 	intensity = intensity - 1
