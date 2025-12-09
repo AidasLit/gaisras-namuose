@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://dis17812vl16"]
+[gd_scene load_steps=15 format=4 uid="uid://dis17812vl16"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_d2diq"]
 [ext_resource type="PackedScene" uid="uid://bwj74du8g5ofy" path="res://objects/interactive/water_hose.tscn" id="2_7gx67"]
 [ext_resource type="PackedScene" uid="uid://c613mfb23n72f" path="res://objects/static/outside_decor/tree.tscn" id="3_tlwmi"]
 [ext_resource type="PackedScene" uid="uid://1oj1e1m7pal4" path="res://objects/interactive/human.tscn" id="4_1vmtn"]
 [ext_resource type="PackedScene" uid="uid://x1thu31dn035" path="res://objects/utils/rescue_area.tscn" id="5_ustps"]
+[ext_resource type="PackedScene" uid="uid://df58ytvtdaptu" path="res://objects/interactive/reggdoll.tscn" id="6_tlrw8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tlwmi"]
 size = Vector2(20, 20)
@@ -115,6 +116,7 @@ transform = Transform3D(-0.444979, 0, 0.895541, 0, 1, 0, -0.895541, 0, -0.444979
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.078436, 0.40595436, -3.6797087)
+collision_mask = 32769
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" index="0"]
 mesh = SubResource("ArrayMesh_tlwmi")
@@ -132,3 +134,6 @@ target_name = "Human pence"
 
 [node name="RescueArea" parent="." index="13" instance=ExtResource("5_ustps")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.074893, 0, -6.902543)
+
+[node name="Human2" parent="." index="14" instance=ExtResource("6_tlrw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27032065, 1.289796, -2.1427822)
