@@ -235,7 +235,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.83601, 0, 4.969576)
 [node name="world_objects" type="Node3D" parent="." index="5"]
 
 [node name="namas" parent="world_objects" index="0" instance=ExtResource("3_4yql1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015000343, -0.017223358, 0.014122009)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 4.671633, -0.017223358, 0.014122009)
 
 [node name="Ground" type="MeshInstance3D" parent="world_objects" index="1"]
 transform = Transform3D(43.54, 0, 0, 0, 43.54, 0, 0, 0, 43.54, 26.174232, 0, 0)
