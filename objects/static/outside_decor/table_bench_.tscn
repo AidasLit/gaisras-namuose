@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1w4dcy3nv4fv"]
+
+[ext_resource type="PackedScene" uid="uid://dkon1hoclwe7n" path="res://assets/scenes/Table Bench .blend" id="1_owney"]
+
+[node name="Table Bench " instance=ExtResource("1_owney")]

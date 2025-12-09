@@ -426,7 +426,7 @@ transform = Transform3D(1.79, 0, 0, 0, 2.938706, 0, 0, 0, 1.79, 0.49946213, 0.99
 transform = Transform3D(1.79, 0, 0, 0, 2.938706, 0, 0, 0, 1.79, 8.6911125, 0.9918568, -31.916986)
 
 [node name="FireTruck" parent="world_objects" index="4" instance=ExtResource("9_dg1t0")]
-transform = Transform3D(-0.7704304, 0, -1.6101744, 0, 1.785, 0, 1.6101744, 0, -0.7704304, 20.052, 0.808, 3.765)
+transform = Transform3D(-0.7704304, 0, -1.6101744, 0, 1.785, 0, 1.6101744, 0, -0.7704304, 19.996906, 0.808, 3.765)
 
 [node name="10084SmallHomeV3Iteration0" type="MeshInstance3D" parent="world_objects/FireTruck" index="2"]
 transform = Transform3D(0.008788168, -0.004771588, -2.0857273e-10, 0, -4.3711382e-10, 0.009999998, -0.004771588, -0.008788168, -3.8414313e-10, 2.4884162, -0.181, -7.518386)
