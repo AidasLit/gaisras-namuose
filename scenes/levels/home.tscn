@@ -397,8 +397,6 @@ metadata/_edit_group_ = true
 [node name="Cube_016" parent="VRaplinka" index="13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -35.743004, 0.01390301, 0)
 
-[node name="hidrantas" parent="VRaplinka/Cube_013/StaticBody3D" index="0" instance=ExtResource("6_cfxxb")]
-
 [node name="Cube_023" type="MeshInstance3D" parent="VRaplinka" index="23"]
 transform = Transform3D(0.99924946, 0, -0.03873662, 0, 1, 0, 0.03873662, 0, 0.99924946, -35.0158, 0.6309663, 4.502878)
 mesh = SubResource("ArrayMesh_ososg")
@@ -1800,5 +1798,8 @@ shape = SubResource("ConcavePolygonShape3D_fm0rr")
 
 [node name="Hemi" type="DirectionalLight3D" parent="StreetLamp2" index="1"]
 transform = Transform3D(-2.3841858e-07, 1, 2.9802322e-08, -0.64278746, -1.1920929e-07, 0.76604456, 0.7660445, 1.1920929e-07, 0.64278746, 0.4163556, 20.8137, 24.619892)
+
+[node name="hidrantas2" parent="." index="25" instance=ExtResource("6_cfxxb")]
+transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, 23.033804, 0.04, 3.283)
 
 [editable path="VRaplinka"]

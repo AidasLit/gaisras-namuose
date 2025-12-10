@@ -35,21 +35,29 @@ target_name = ""
 press_to_hold = false
 picked_up_layer = 65792
 
-[node name="CollisionShape3D" parent="." index="0"]
+[node name="HurtBox" type="Area3D" parent="." index="0"]
+collision_layer = 32
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008388546, 0.8847834, 0.023007197)
 shape = SubResource("ConvexPolygonShape3D_tyqby")
 
-[node name="zmogelis" parent="." index="1" instance=ExtResource("3_fkygg")]
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008388546, 0.8847834, 0.023007197)
+shape = SubResource("ConvexPolygonShape3D_tyqby")
 
-[node name="HighlightRing" parent="." index="2" instance=ExtResource("3_tyqby")]
+[node name="zmogelis" parent="." index="2" instance=ExtResource("3_fkygg")]
+
+[node name="HighlightRing" parent="." index="3" instance=ExtResource("3_tyqby")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1259613, 0)
 
-[node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("4_x3eim")]
+[node name="GrabPointHandLeft" parent="." index="4" instance=ExtResource("4_x3eim")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012598336, 1.4195226, 0)
 visible = true
 hand_pose = SubResource("Resource_06qah")
 
-[node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("9_hdwgs")]
+[node name="GrabPointHandRight" parent="." index="5" instance=ExtResource("9_hdwgs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.013, 1.42, 0)
 visible = true
 hand_pose = SubResource("Resource_f4g04")

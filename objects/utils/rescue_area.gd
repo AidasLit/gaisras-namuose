@@ -6,9 +6,12 @@ func _ready() -> void:
 func _on_body_entered(body : Node3D):
 	if body is RescueTarget and body.is_in_group("rescue_targets"):
 		body.remove_from_group("rescue_targets")
+		body.enabled = false
+		body.drop()
+		
+		SignalBus.object_rescued.emit()
 		
 		var timer = get_tree().create_timer(3)
 		await timer.timeout
 		
-		SignalBus.object_rescued.emit()
 		body.queue_free()

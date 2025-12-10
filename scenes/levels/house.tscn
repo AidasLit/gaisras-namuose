@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://kuhspx305dlb"]
+[gd_scene load_steps=40 format=4 uid="uid://kuhspx305dlb"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_g6yoe"]
 [ext_resource type="PackedScene" uid="uid://ornhqw5xhl0v" path="res://objects/static/namas.tscn" id="3_4yql1"]
@@ -18,7 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://cerdx8ny7s02a" path="res://resources/10084_Small Home_V1_Diffuse.jpg" id="13_lgdbu"]
 [ext_resource type="ArrayMesh" uid="uid://blgeb67n6nyv6" path="res://resources/10084_Small Home_V3_Iteration0.obj" id="14_gv72x"]
 [ext_resource type="ArrayMesh" uid="uid://0mk0464b1xhx" path="res://assets/scenes/Street Lamp.obj" id="15_4ai8r"]
-[ext_resource type="PackedScene" uid="uid://boy2l5mst2yiw" path="res://objects/interactive/axe.tscn" id="18_gv72x"]
+[ext_resource type="PackedScene" uid="uid://1oj1e1m7pal4" path="res://objects/interactive/human.tscn" id="20_t14hk"]
+[ext_resource type="PackedScene" uid="uid://x1thu31dn035" path="res://objects/utils/rescue_area.tscn" id="21_nf1s7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg87n"]
 albedo_color = Color(0, 0.36078432, 0, 1)
@@ -232,7 +233,7 @@ size = Vector2(4.03, 2.61)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.332445, 0, 0)
 
 [node name="GameFlow" parent="." index="3"]
-type = 1
+type = 2
 
 [node name="Spawn" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.83601, 0, 4.969576)
@@ -240,7 +241,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.83601, 0, 4.969576)
 [node name="world_objects" type="Node3D" parent="." index="5"]
 
 [node name="namas" parent="world_objects" index="0" instance=ExtResource("3_4yql1")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.8827853, 0.040476084, 0.014122009)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.8887391, 0.03299308, 0.018778086)
 
 [node name="Ground" type="MeshInstance3D" parent="world_objects" index="1"]
 transform = Transform3D(43.54, 0, 0, 0, 43.54, 0, 0, 0, 43.54, 26.174232, 0, 0)
@@ -459,10 +460,7 @@ metadata/_edit_group_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="world_objects/Table_low3/StaticBody3D" index="0"]
 shape = SubResource("ConcavePolygonShape3D_dvuk3")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="world_objects" index="8"]
-transform = Transform3D(0.655, 0, 0, 0, 0.655, 0, 0, 0, 0.655, 15.854942, -0.025, -3.977767)
-
-[node name="Ground2" type="MeshInstance3D" parent="world_objects" index="9"]
+[node name="Ground2" type="MeshInstance3D" parent="world_objects" index="8"]
 transform = Transform3D(43.54, 0, 0, 0, 43.54, 0, 0, 0, 43.54, 26.174232, 0, 0)
 mesh = SubResource("PlaneMesh_bbbus")
 skeleton = NodePath("../..")
@@ -493,7 +491,7 @@ sgt_tool_shape = {
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="StreetLamp2" type="MeshInstance3D" parent="world_objects" index="10"]
+[node name="StreetLamp2" type="MeshInstance3D" parent="world_objects" index="9"]
 transform = Transform3D(-0.009, 0, -7.8680495e-10, 0, 0.008999999, 0, 7.8680495e-10, 0, -0.009, 23.328701, 3.958, -29.373434)
 mesh = ExtResource("15_4ai8r")
 
@@ -506,7 +504,7 @@ shape = SubResource("ConcavePolygonShape3D_t14hk")
 [node name="Hemi" type="DirectionalLight3D" parent="world_objects/StreetLamp2" index="1"]
 transform = Transform3D(-2.3841858e-07, 1, 2.9802322e-08, -0.64278746, -1.1920929e-07, 0.76604456, 0.7660445, 1.1920929e-07, 0.64278746, 0.4163556, 20.8137, 24.619892)
 
-[node name="StreetLamp3" type="MeshInstance3D" parent="world_objects" index="11"]
+[node name="StreetLamp3" type="MeshInstance3D" parent="world_objects" index="10"]
 transform = Transform3D(-0.009, 0, -7.8680495e-10, 0, 0.009, 0, 7.8680495e-10, 0, -0.009, 23.409193, 3.958, 28.180937)
 mesh = ExtResource("15_4ai8r")
 
@@ -553,14 +551,17 @@ transform = Transform3D(0.00045369344, 0.012992081, 5.679019e-10, 0, -5.6824806e
 material_override = SubResource("StandardMaterial3D_4ai8r")
 mesh = ExtResource("14_gv72x")
 
-[node name="Axe" parent="." index="14" instance=ExtResource("18_gv72x")]
-transform = Transform3D(0.015587265, 0.29110336, -0.9565646, 0.9985695, -0.053468868, 0, -0.051146425, -0.9551962, -0.2915204, 13.566275, 0.70680475, -3.88318)
-
-[node name="Axe2" parent="." index="15" instance=ExtResource("18_gv72x")]
-transform = Transform3D(0.002552006, 0.11905256, -0.99288464, 0.99977034, -0.021431042, -4.5772092e-10, -0.021278555, -0.99265665, -0.11907989, 13.210605, 0.71868634, -3.861652)
-
-[node name="Water hose2" parent="." index="16" instance=ExtResource("10_dvuk3")]
+[node name="Water hose2" parent="." index="14" instance=ExtResource("10_dvuk3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.408638, 0.6795696, -4.164172)
 
-[node name="Water hose3" parent="." index="17" instance=ExtResource("10_dvuk3")]
+[node name="Water hose3" parent="." index="15" instance=ExtResource("10_dvuk3")]
 transform = Transform3D(0.073412314, -0.9973017, 0, 0.9973017, 0.073412314, 0, 0, 0, 1, 13.117601, 0.4768253, -4.4079456)
+
+[node name="Human" parent="." index="16" instance=ExtResource("20_t14hk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74826944, 0.10299301, -5.9853725)
+target_name = "Bedroom dweller"
+
+[node name="RescueArea" parent="." index="17" instance=ExtResource("21_nf1s7")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.244325, 0, 4.9474792)
+
+[editable path="RescueArea"]
