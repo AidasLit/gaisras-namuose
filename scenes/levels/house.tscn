@@ -236,7 +236,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.332445, 0, 0)
 type = 2
 
 [node name="Spawn" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.83601, 0, 4.969576)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.26492, 0, -0.48431492)
 
 [node name="world_objects" type="Node3D" parent="." index="5"]
 
@@ -501,9 +501,6 @@ mesh = ExtResource("15_4ai8r")
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, 3.5527137e-15, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_t14hk")
 
-[node name="Hemi" type="DirectionalLight3D" parent="world_objects/StreetLamp2" index="1"]
-transform = Transform3D(-2.3841858e-07, 1, 2.9802322e-08, -0.64278746, -1.1920929e-07, 0.76604456, 0.7660445, 1.1920929e-07, 0.64278746, 0.4163556, 20.8137, 24.619892)
-
 [node name="StreetLamp3" type="MeshInstance3D" parent="world_objects" index="10"]
 transform = Transform3D(-0.009, 0, -7.8680495e-10, 0, 0.009, 0, 7.8680495e-10, 0, -0.009, 23.409193, 3.958, 28.180937)
 mesh = ExtResource("15_4ai8r")
@@ -514,54 +511,47 @@ mesh = ExtResource("15_4ai8r")
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, 3.5527137e-15, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_t14hk")
 
-[node name="Hemi" type="DirectionalLight3D" parent="world_objects/StreetLamp3" index="1"]
-transform = Transform3D(-2.3841858e-07, 1, 2.9802322e-08, -0.64278746, -1.1920929e-07, 0.76604456, 0.7660445, 1.1920929e-07, 0.64278746, 0.4163556, 20.8137, 24.619892)
-visible = false
-
 [node name="Water hose" parent="." index="6" instance=ExtResource("10_dvuk3")]
 transform = Transform3D(-0.28503597, 0, 0.95851684, 0, 1, 0, -0.95851684, 0, -0.28503597, 12.751842, 1.0064523, -3.6638856)
 
-[node name="hidrantas2" parent="." index="7" instance=ExtResource("11_ctgqc")]
-transform = Transform3D(0.16000001, 0, 0, 0, 0.16000001, 0, 0, 0, 0.16000001, 23.551926, 0.13833761, -5.9521356)
-
-[node name="hidrantas" parent="." index="8" instance=ExtResource("11_ctgqc")]
+[node name="hidrantas" parent="." index="7" instance=ExtResource("11_ctgqc")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 14.654277, 0.09881258, -4.2515254)
 
-[node name="Background4" type="MeshInstance3D" parent="." index="9"]
+[node name="Background4" type="MeshInstance3D" parent="." index="8"]
 transform = Transform3D(-1.2939008e-06, -2.084, 2.56411e-06, 0, -9.1094535e-08, -58.66, 29.601, -9.1094535e-08, 1.1208081e-13, -15.986, 53.666, 15.186)
 mesh = SubResource("PlaneMesh_lgdbu")
 skeleton = NodePath("../hidrantas")
 
-[node name="Background3" type="MeshInstance3D" parent="." index="10"]
+[node name="Background3" type="MeshInstance3D" parent="." index="9"]
 transform = Transform3D(26.662546, 0, 0, 0, -8.204081e-08, -52.83415, 0, 1.876875, -2.309454e-06, 34.641796, 44.1146, 42.719948)
 mesh = SubResource("PlaneMesh_lgdbu")
 skeleton = NodePath("../hidrantas")
 
-[node name="Background2" type="MeshInstance3D" parent="." index="11"]
+[node name="Background2" type="MeshInstance3D" parent="." index="10"]
 transform = Transform3D(-1.5698508e-06, 2.528, -3.1108084e-06, 0, -1.1050239e-07, -71.167, -35.914, -1.1050239e-07, 1.3597775e-13, 67.037, 41.358, -12.336)
 mesh = SubResource("PlaneMesh_lgdbu")
 skeleton = NodePath("../hidrantas")
 
-[node name="Background" type="MeshInstance3D" parent="." index="12"]
+[node name="Background" type="MeshInstance3D" parent="." index="11"]
 transform = Transform3D(-28.316, -3.0108563e-07, 3.7034584e-13, 0, -8.716051e-08, -56.111, 4.2755973e-06, -1.994, 2.4526896e-06, 23.763634, 26.25, -42.838)
 mesh = SubResource("PlaneMesh_lgdbu")
 
-[node name="10084SmallHomeV3Iteration0" type="MeshInstance3D" parent="." index="13"]
+[node name="10084SmallHomeV3Iteration0" type="MeshInstance3D" parent="." index="12"]
 transform = Transform3D(0.00045369344, 0.012992081, 5.679019e-10, 0, -5.6824806e-10, 0.013, 0.012992081, -0.00045369344, -1.983157e-11, 29.973, 0.17833304, -12.961736)
 material_override = SubResource("StandardMaterial3D_4ai8r")
 mesh = ExtResource("14_gv72x")
 
-[node name="Water hose2" parent="." index="14" instance=ExtResource("10_dvuk3")]
+[node name="Water hose2" parent="." index="13" instance=ExtResource("10_dvuk3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.408638, 0.6795696, -4.164172)
 
-[node name="Water hose3" parent="." index="15" instance=ExtResource("10_dvuk3")]
+[node name="Water hose3" parent="." index="14" instance=ExtResource("10_dvuk3")]
 transform = Transform3D(0.073412314, -0.9973017, 0, 0.9973017, 0.073412314, 0, 0, 0, 1, 13.117601, 0.4768253, -4.4079456)
 
-[node name="Human" parent="." index="16" instance=ExtResource("20_t14hk")]
+[node name="Human" parent="." index="15" instance=ExtResource("20_t14hk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74826944, 0.10299301, -5.9853725)
 target_name = "Bedroom dweller"
 
-[node name="RescueArea" parent="." index="17" instance=ExtResource("21_nf1s7")]
+[node name="RescueArea" parent="." index="16" instance=ExtResource("21_nf1s7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.244325, 0, 4.9474792)
 
 [editable path="RescueArea"]

@@ -1796,9 +1796,6 @@ mesh = ExtResource("19_nt1ir")
 transform = Transform3D(0.99999994, 0, -3.5527137e-15, 0, 0.99999994, 0, 3.5527137e-15, 0, 0.99999994, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_fm0rr")
 
-[node name="Hemi" type="DirectionalLight3D" parent="StreetLamp2" index="1"]
-transform = Transform3D(-2.3841858e-07, 1, 2.9802322e-08, -0.64278746, -1.1920929e-07, 0.76604456, 0.7660445, 1.1920929e-07, 0.64278746, 0.4163556, 20.8137, 24.619892)
-
 [node name="hidrantas2" parent="." index="25" instance=ExtResource("6_cfxxb")]
 transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, 23.033804, 0.04, 3.283)
 

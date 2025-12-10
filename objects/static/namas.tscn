@@ -1243,7 +1243,10 @@ skeleton = NodePath("")
 [node name="Furniture_1_aukstas" type="Node3D" parent="."]
 
 [node name="bean_bag" parent="Furniture_1_aukstas" instance=ExtResource("1_21vqy")]
-transform = Transform3D(-0.4243972, 0, -0.6781497, 0, 0.8, 0, 0.6781497, 0, -0.4243972, 8.97438, 0.08124015, 3.3415165)
+transform = Transform3D(-0.4243972, 0, -0.6781497, 0, 0.8, 0, 0.6781497, 0, -0.4243972, 8.982372, 0.08124015, 3.3187008)
+
+[node name="bean_bag2" parent="Furniture_1_aukstas" instance=ExtResource("1_21vqy")]
+transform = Transform3D(0.45374608, 0, -0.6588736, 0, 0.79999995, 0, 0.6588736, 0, 0.45374608, 8.790464, 0.08124015, 1.3004067)
 
 [node name="house_cabinet" parent="Furniture_1_aukstas" instance=ExtResource("2_n4q63")]
 transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 1.339576, 0.03234124, -6.281139)
@@ -1258,7 +1261,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 5.187077, 0.108089216, 
 transform = Transform3D(-3.4969112e-08, 0, 0.8, 0, 0.8, 0, -0.8, 0, -3.4969112e-08, -9.401587, 1.0049311, 2.032423)
 
 [node name="house_dresser" parent="Furniture_1_aukstas" instance=ExtResource("5_swpci")]
-transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 9.261239, 1.0266677, -3.033824)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, 9.261239, 1.0266677, 5.651173)
 
 [node name="house_bookcase" parent="Furniture_1_aukstas" instance=ExtResource("6_adt2f")]
 transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 2.540091, 0.04611778, 8.136879)

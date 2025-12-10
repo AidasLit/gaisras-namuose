@@ -4,11 +4,15 @@ class_name WaterHose
 @onready var water_particle : PackedScene = preload("res://objects/utils/spray_particle.tscn")
 @onready var nozzle_from: Marker3D = $"Nozzle from"
 @onready var nozzle_to: Marker3D = $"Nozzle to"
+@onready var meter_pointer: MeshInstance3D = $gesintuvas_updated/Cube_001
 
 var active : bool = false
 
-var max_capacity : int = 2000
-var current_capacity : int = max_capacity
+var max_capacity : int = 500
+var current_capacity : int = max_capacity :
+	set(value):
+		current_capacity = value
+		meter_pointer.rotation_degrees.x = 315.0 - 315.0 * current_capacity / max_capacity
 
 var time_counter = 0.0
 var spray_direction = Vector3.ZERO

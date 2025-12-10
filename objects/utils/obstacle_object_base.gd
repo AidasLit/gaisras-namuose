@@ -75,13 +75,13 @@ func _physics_process(delta: float) -> void:
 					break
 
 func particle_hit():
-	intensity = intensity - 1
+	intensity = intensity - 3
 	was_recently_hit = true
 	intensity_timer.start(10.0)
 	damage_timer.paused = true
 
 func ignite():
-	damage_timer.start(10.0)
+	damage_timer.start(7.0)
 
 func on_intensity_timeout():
 	was_recently_hit = false
