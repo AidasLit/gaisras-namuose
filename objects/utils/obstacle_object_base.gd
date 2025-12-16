@@ -6,6 +6,7 @@ class_name ObstacleObjectBase
 @onready var fire: GPUParticles3D = $Fire
 @onready var intensity_timer: Timer = $Intensity
 @onready var damage_timer: Timer = $DamageArea
+@onready var fire_sound: AudioStreamPlayer3D = $FireSound
 
 ### fire system
 @export var burning = false : 
@@ -13,8 +14,10 @@ class_name ObstacleObjectBase
 		if value != burning:
 			if value:
 				self.add_to_group("fire")
+				
 			else:
 				self.remove_from_group("fire")
+				
 			
 			SignalBus.fire_update.emit()
 		

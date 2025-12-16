@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=4 uid="uid://ornhqw5xhl0v"]
+[gd_scene load_steps=127 format=4 uid="uid://ornhqw5xhl0v"]
 
 [ext_resource type="PackedScene" uid="uid://0gy05a0jeysy" path="res://objects/static/interior/house_bean_bag.tscn" id="1_21vqy"]
 [ext_resource type="PackedScene" uid="uid://uvv76ayqr0b5" path="res://objects/static/interior/house_cabinet.tscn" id="2_n4q63"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://bydk7a5puxang" path="res://objects/static/interior/house_chair_2.tscn" id="30_vtcms"]
 [ext_resource type="PackedScene" uid="uid://o3lgw5ligp1r" path="res://objects/static/interior/house_furniture_set_4.tscn" id="31_ujg48"]
 [ext_resource type="PackedScene" uid="uid://dk8ltdp2mt38p" path="res://objects/static/interior/house_furniture_set_5.tscn" id="32_sycls"]
+[ext_resource type="AudioStream" uid="uid://t1uccugu8o4b" path="res://Garsai/Burning Fire with sound effects free to use  no copyright.mp3" id="33_0rner"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k76tb"]
 resource_name = "Material.002"
@@ -1571,3 +1572,6 @@ size = Vector3(0.2, 9, 20)
 [node name="GPUParticlesCollisionBox3D7" type="GPUParticlesCollisionBox3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 4.484, -10)
 size = Vector3(0.2, 9, 20)
+
+[node name="FireSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("33_0rner")

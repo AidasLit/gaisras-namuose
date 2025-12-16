@@ -10,6 +10,7 @@ class_name Fire
 @onready var p2: GPUParticles3D = $GPUParticles3D2
 @onready var steam: GPUParticles3D = $Steam   # continuous steam while spraying
 @onready var collision_shape_3d: CollisionShape3D = $FireHit/CollisionShape3D
+@onready var fire_sound: AudioStreamPlayer3D = $FireSound
 
 
 func _ready() -> void:
@@ -18,7 +19,11 @@ func _ready() -> void:
 	
 	collision_shape_3d.shape = hitbox.shape
 	
+	if intensity > 0.0:
+		fire_sound.play()
+	
 	_apply_visuals()
+
 
 # Called each frame the extinguisher hits this fire (amount is delta-scaled)
 func apply_extinguish(amount: float) -> void:
@@ -31,11 +36,15 @@ func apply_extinguish(amount: float) -> void:
 
 	intensity = max(0.0, intensity - amount)
 
-	# if fire is out, stop steam
-	if intensity <= 0.0 and steam and steam.emitting:
-		steam.emitting = false
+	# if fire is out, stop steam + sound
+	if intensity <= 0.0:
+		if steam and steam.emitting:
+			steam.emitting = false
+		if fire_sound.playing:
+			fire_sound.stop()
 
 	_apply_visuals()
+
 
 func _apply_visuals() -> void:
 	var on := intensity > 0.0

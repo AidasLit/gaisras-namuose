@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://dr3kqc5vp636u"]
+[gd_scene load_steps=42 format=4 uid="uid://dr3kqc5vp636u"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_yskkl"]
 [ext_resource type="PackedScene" uid="uid://8mtn78v107vf" path="res://objects/static/laukas.tscn" id="2_d1b6h"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dgxj2wxocfxlu" path="res://objects/static/outside_decor/tree_4.tscn" id="13_5tm82"]
 [ext_resource type="PackedScene" uid="uid://sekoyhrycsg5" path="res://objects/static/outside_decor/sulinys.tscn" id="18_1uqkj"]
 [ext_resource type="ArrayMesh" uid="uid://0mk0464b1xhx" path="res://assets/scenes/Street Lamp.obj" id="19_nt1ir"]
+[ext_resource type="AudioStream" uid="uid://dlnbsxem1hhok" path="res://Garsai/Firetruck - Sound Effect.mp3" id="21_cfxxb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cfxxb"]
 resource_local_to_scene = true
@@ -1798,5 +1799,8 @@ shape = SubResource("ConcavePolygonShape3D_fm0rr")
 
 [node name="hidrantas2" parent="." index="25" instance=ExtResource("6_cfxxb")]
 transform = Transform3D(0.355, 0, 0, 0, 0.355, 0, 0, 0, 0.355, 23.033804, 0.04, 3.283)
+
+[node name="SirenSound" type="AudioStreamPlayer3D" parent="." index="26"]
+stream = ExtResource("21_cfxxb")
 
 [editable path="VRaplinka"]

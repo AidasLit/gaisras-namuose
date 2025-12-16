@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://kuhspx305dlb"]
+[gd_scene load_steps=42 format=4 uid="uid://kuhspx305dlb"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_g6yoe"]
 [ext_resource type="PackedScene" uid="uid://ornhqw5xhl0v" path="res://objects/static/namas.tscn" id="3_4yql1"]
@@ -19,7 +19,9 @@
 [ext_resource type="ArrayMesh" uid="uid://blgeb67n6nyv6" path="res://resources/10084_Small Home_V3_Iteration0.obj" id="14_gv72x"]
 [ext_resource type="ArrayMesh" uid="uid://0mk0464b1xhx" path="res://assets/scenes/Street Lamp.obj" id="15_4ai8r"]
 [ext_resource type="PackedScene" uid="uid://1oj1e1m7pal4" path="res://objects/interactive/human.tscn" id="20_t14hk"]
+[ext_resource type="AudioStream" uid="uid://dlnbsxem1hhok" path="res://Garsai/Firetruck - Sound Effect.mp3" id="21_57b35"]
 [ext_resource type="PackedScene" uid="uid://x1thu31dn035" path="res://objects/utils/rescue_area.tscn" id="21_nf1s7"]
+[ext_resource type="AudioStream" uid="uid://t1uccugu8o4b" path="res://Garsai/Burning Fire with sound effects free to use  no copyright.mp3" id="22_57b35"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg87n"]
 albedo_color = Color(0, 0.36078432, 0, 1)
@@ -553,5 +555,11 @@ target_name = "Bedroom dweller"
 
 [node name="RescueArea" parent="." index="16" instance=ExtResource("21_nf1s7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.244325, 0, 4.9474792)
+
+[node name="SirenSound" type="AudioStreamPlayer3D" parent="." index="17"]
+stream = ExtResource("21_57b35")
+
+[node name="FireSound" type="AudioStreamPlayer3D" parent="." index="18"]
+stream = ExtResource("22_57b35")
 
 [editable path="RescueArea"]
