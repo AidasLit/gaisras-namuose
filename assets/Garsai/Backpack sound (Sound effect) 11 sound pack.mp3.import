@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpyfrxffpqhs7"
+path="res://.godot/imported/Backpack sound (Sound effect) 11 sound pack.mp3-6ae4ebdbcbaa15dcd5a47c85c88ed381.mp3str"
+
+[deps]
+
+source_file="res://assets/Garsai/Backpack sound (Sound effect) 11 sound pack.mp3"
+dest_files=["res://.godot/imported/Backpack sound (Sound effect) 11 sound pack.mp3-6ae4ebdbcbaa15dcd5a47c85c88ed381.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

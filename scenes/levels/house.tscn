@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://kuhspx305dlb"]
+[gd_scene load_steps=43 format=4 uid="uid://kuhspx305dlb"]
 
 [ext_resource type="PackedScene" uid="uid://c6emy0isr77oa" path="res://scenes/my_base.tscn" id="1_g6yoe"]
 [ext_resource type="PackedScene" uid="uid://ornhqw5xhl0v" path="res://objects/static/namas.tscn" id="3_4yql1"]
@@ -19,9 +19,10 @@
 [ext_resource type="ArrayMesh" uid="uid://blgeb67n6nyv6" path="res://resources/10084_Small Home_V3_Iteration0.obj" id="14_gv72x"]
 [ext_resource type="ArrayMesh" uid="uid://0mk0464b1xhx" path="res://assets/scenes/Street Lamp.obj" id="15_4ai8r"]
 [ext_resource type="PackedScene" uid="uid://1oj1e1m7pal4" path="res://objects/interactive/human.tscn" id="20_t14hk"]
-[ext_resource type="AudioStream" uid="uid://dlnbsxem1hhok" path="res://Garsai/Firetruck - Sound Effect.mp3" id="21_57b35"]
+[ext_resource type="AudioStream" uid="uid://dlnbsxem1hhok" path="res://assets/Garsai/Firetruck - Sound Effect.mp3" id="21_57b35"]
 [ext_resource type="PackedScene" uid="uid://x1thu31dn035" path="res://objects/utils/rescue_area.tscn" id="21_nf1s7"]
-[ext_resource type="AudioStream" uid="uid://t1uccugu8o4b" path="res://Garsai/Burning Fire with sound effects free to use  no copyright.mp3" id="22_57b35"]
+[ext_resource type="AudioStream" uid="uid://cjqvg1gmjc8f6" path="res://assets/Garsai/background_wind.mp3" id="23_24i8j"]
+[ext_resource type="AudioStream" uid="uid://spqv101kig57" path="res://assets/Garsai/Level win sound effect(HD).mp3" id="23_gdevj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg87n"]
 albedo_color = Color(0, 0.36078432, 0, 1)
@@ -243,7 +244,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.26492, 0, -0.48431492)
 [node name="world_objects" type="Node3D" parent="." index="5"]
 
 [node name="namas" parent="world_objects" index="0" instance=ExtResource("3_4yql1")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.8887391, 0.03299308, 0.018778086)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 1.889368, 0.026811123, 0.016425133)
 
 [node name="Ground" type="MeshInstance3D" parent="world_objects" index="1"]
 transform = Transform3D(43.54, 0, 0, 0, 43.54, 0, 0, 0, 43.54, 26.174232, 0, 0)
@@ -446,7 +447,7 @@ mesh = ExtResource("14_gv72x")
 skeleton = NodePath("../FireTruck")
 
 [node name="FireTruck" parent="world_objects" index="6" instance=ExtResource("9_dg1t0")]
-transform = Transform3D(-0.43161365, 0, -0.90205854, 0, 1, 0, 0.90205854, 0, -0.43161365, 19.996906, 0.808, 3.765)
+transform = Transform3D(-0.43161365, 0, -0.90205854, 0, 1, 0, 0.90205854, 0, -0.43161365, 19.996906, 0.51566, 3.765)
 
 [node name="Table_low3" type="MeshInstance3D" parent="world_objects" index="7"]
 transform = Transform3D(0.20270187, 0, 0.97924054, 0, 1, 0, -0.97924054, 0, 0.20270187, 13.08531, 0.42419818, -3.8137941)
@@ -556,10 +557,24 @@ target_name = "Bedroom dweller"
 [node name="RescueArea" parent="." index="16" instance=ExtResource("21_nf1s7")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.244325, 0, 4.9474792)
 
-[node name="SirenSound" type="AudioStreamPlayer3D" parent="." index="17"]
-stream = ExtResource("21_57b35")
+[node name="Sounds" type="Node3D" parent="." index="17"]
 
-[node name="FireSound" type="AudioStreamPlayer3D" parent="." index="18"]
-stream = ExtResource("22_57b35")
+[node name="SirenSound" type="AudioStreamPlayer3D" parent="Sounds" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.296083, 3.5111494, 2.6222386)
+stream = ExtResource("21_57b35")
+volume_db = -30.0
+autoplay = true
+
+[node name="background_wind" type="AudioStreamPlayer3D" parent="Sounds" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.7092, 15.445412, 0)
+stream = ExtResource("23_24i8j")
+attenuation_model = 3
+volume_db = -10.0
+autoplay = true
+max_distance = 100.0
+
+[node name="FinishSound" type="AudioStreamPlayer3D" parent="Sounds" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.626981, 4.6176667, 3.2657533)
+stream = ExtResource("23_gdevj")
 
 [editable path="RescueArea"]

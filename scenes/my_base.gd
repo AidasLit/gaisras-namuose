@@ -5,7 +5,7 @@ extends XRToolsSceneBase
 @onready var right_pickup: XRToolsFunctionPickup = $XROrigin3D/RightHand/XRToolsFunctionPickup
 @onready var left_hand_menu_thing: XRToolsViewport2DIn3D = $XROrigin3D/LeftHand/Viewport2Din3D
 @onready var game_flow: GameFlow = $GameFlow
-@onready var siren_sound: AudioStreamPlayer3D = $SirenSound
+@onready var finish_sound: AudioStreamPlayer3D = $Sounds/FinishSound
 
 var left_hand_menu : WristControl
 var held_items : Array[XRToolsPickable] = [null, null]
@@ -13,10 +13,7 @@ var held_items : Array[XRToolsPickable] = [null, null]
 func _ready() -> void:
 	super._ready()
 	
-	# 🔊 Sirena scenos pradžioje
-	siren_sound.play()
-	await get_tree().create_timer(4).timeout
-	siren_sound.stop()
+
 	
 	left_pickup.has_picked_up.connect(item_pickup.bind(0))
 	right_pickup.has_picked_up.connect(item_pickup.bind(1))

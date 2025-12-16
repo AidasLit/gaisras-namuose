@@ -13,7 +13,7 @@ extends Node3D
 
 @onready var area_3d: Area3D = $Area3D
 @onready var label_3d: Label3D = $Label3D
-
+@onready var start_sound: AudioStreamPlayer3D = $StartSound
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	area_3d.body_entered.connect(_on_body_entered)
@@ -38,4 +38,7 @@ func _on_body_entered(body : Node3D):
 	if zone_scene == "":
 		scene_base.reset_scene(spawn_node_name)
 	else:
+		if start_sound and not start_sound.playing:
+			start_sound.play()
+			await start_sound.finished
 		scene_base.load_scene(zone_scene, spawn_node_name)
