@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpivlgu4gd5rx"
+path="res://.godot/imported/pick up sound.mp3-2b1e8b6a1ffe901b649db2e7c7745ed4.mp3str"
+
+[deps]
+
+source_file="res://assets/Garsai/pick up sound.mp3"
+dest_files=["res://.godot/imported/pick up sound.mp3-2b1e8b6a1ffe901b649db2e7c7745ed4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

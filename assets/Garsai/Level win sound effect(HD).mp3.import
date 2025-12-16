@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://spqv101kig57"
+path="res://.godot/imported/Level win sound effect(HD).mp3-72906e09a535f3d073e83e97c12c073c.mp3str"
+
+[deps]
+
+source_file="res://assets/Garsai/Level win sound effect(HD).mp3"
+dest_files=["res://.godot/imported/Level win sound effect(HD).mp3-72906e09a535f3d073e83e97c12c073c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

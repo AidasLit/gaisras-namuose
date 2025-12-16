@@ -14,10 +14,11 @@ class_name ObstacleObjectBase
 		if value != burning:
 			if value:
 				self.add_to_group("fire")
+				_play_fire_sound()
 				
 			else:
 				self.remove_from_group("fire")
-				
+				_stop_fire_sound()
 			
 			SignalBus.fire_update.emit()
 		
@@ -95,3 +96,11 @@ func on_damage_timeout():
 		if item.burning and not item.was_recently_hit:
 			burning = true
 			intensity = 20
+
+func _play_fire_sound() -> void:
+	if fire_sound and not fire_sound.playing:
+		fire_sound.play()
+
+func _stop_fire_sound() -> void:
+	if fire_sound and fire_sound.playing:
+		fire_sound.stop()

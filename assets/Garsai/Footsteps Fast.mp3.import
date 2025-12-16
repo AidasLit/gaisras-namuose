@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgn68avfku7vv"
+path="res://.godot/imported/Footsteps Fast.mp3-431313e951583b90054a05a2ac1d1670.mp3str"
+
+[deps]
+
+source_file="res://assets/Garsai/Footsteps Fast.mp3"
+dest_files=["res://.godot/imported/Footsteps Fast.mp3-431313e951583b90054a05a2ac1d1670.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
