@@ -15,11 +15,12 @@ class_name ObstacleObjectBase
 			if value:
 				self.add_to_group("fire")
 				_play_fire_sound()
-				
 			else:
 				self.remove_from_group("fire")
 				_stop_fire_sound()
 			
+			if hit_box:
+				hit_box.monitoring = value
 			SignalBus.fire_update.emit()
 		
 		burning = value
@@ -46,10 +47,13 @@ class_name ObstacleObjectBase
 
 var was_recently_hit : bool = false
 var close_bodies : Array[ObstacleObjectBase] = []
+var heat_mesh
 
 func _ready() -> void:
 	intensity_timer.timeout.connect(on_intensity_timeout)
 	damage_timer.timeout.connect(on_damage_timeout)
+	
+	heat_mesh = get_tree().get_nodes_in_group("heat_vfx")[0]
 	
 	hit_box.area_entered.connect(func(area):
 		var temp = area.get_parent()
@@ -61,6 +65,16 @@ func _ready() -> void:
 		elif temp is RescueTarget:
 			if burning:
 				temp.dead()
+	)
+	
+	hit_box.body_entered.connect(func(body):
+		if body is XRToolsPlayerBody and burning:
+			heat_mesh.fires_counter += 1
+	)
+	
+	hit_box.body_exited.connect(func(body):
+		if body is XRToolsPlayerBody and burning:
+			heat_mesh.fires_counter -= 1
 	)
 	
 	if self.burning:

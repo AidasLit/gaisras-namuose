@@ -1281,7 +1281,6 @@ transform = Transform3D(0.38276958, 0, 0.70248663, 0, 0.8, 0, -0.70248663, 0, 0.
 
 [node name="house_desk_lamp" parent="Furniture_1_aukstas" instance=ExtResource("11_3v0v0")]
 transform = Transform3D(0.18117334, 0, 0.67614806, 0, 0.7, 0, -0.67614806, 0, 0.18117334, 4.668841, 1.1993308, 6.516971)
-burning = true
 max_particles = 50
 
 [node name="house_chair" parent="Furniture_1_aukstas" instance=ExtResource("12_1kxox")]
@@ -1296,7 +1295,6 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 6.457343, 0.047461472, 
 
 [node name="house_lamp" parent="Furniture_1_aukstas" instance=ExtResource("15_vlxpj")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -9.061743, 1.3788748, 8.7625065)
-burning = true
 max_particles = 50
 
 [node name="house_nightstand" parent="Furniture_1_aukstas" instance=ExtResource("16_pwnrm")]
@@ -1438,17 +1436,17 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -4.1728587, 5.049123, -
 transform = Transform3D(0.90000004, 0, 0, 0, 0.90000004, 0, 0, 0, 0.90000004, -0.27600515, 4.5866194, 0.922848)
 
 [node name="house_chair_2" parent="Furniture_2_aukstas" instance=ExtResource("30_vtcms")]
-transform = Transform3D(-0.7010252, 0, -0.38543963, 0, 0.8, 0, 0.38543963, 0, -0.7010252, 1.2034684, 4.641, 2.8912911)
+transform = Transform3D(-0.7010252, 0, -0.3854396, 0, 0.8, 0, 0.3854396, 0, -0.7010252, 0.45803505, 4.641, 2.3322163)
 
 [node name="house_chair_3" parent="Furniture_2_aukstas" instance=ExtResource("30_vtcms")]
-transform = Transform3D(0.7753125, 0, -0.19720687, 0, 0.8, 0, 0.19720687, 0, 0.7753125, 0.20159552, 4.641, -1.0318693)
+transform = Transform3D(0.7753125, 0, -0.19720687, 0, 0.8, 0, 0.19720687, 0, 0.7753125, 0.23400545, 4.641, -0.62674236)
 max_particles = 50
 
 [node name="house_chair_5" parent="Furniture_2_aukstas" instance=ExtResource("30_vtcms")]
 transform = Transform3D(0.6207579, 0, 0.50463814, 0, 0.8, 0, -0.50463814, 0, 0.6207579, -8.748524, 4.641, -8.772273)
 
 [node name="house_chair_4" parent="Furniture_2_aukstas" instance=ExtResource("30_vtcms")]
-transform = Transform3D(-0.7227042, 0, 0.34307238, 0, 0.8, 0, -0.34307238, 0, -0.7227042, -0.724391, 4.6408343, 2.7867653)
+transform = Transform3D(-0.72270423, 0, 0.34307238, 0, 0.8, 0, -0.34307238, 0, -0.72270423, -0.85403144, 4.6408343, 2.4464586)
 
 [node name="house_sofa" parent="Furniture_2_aukstas" instance=ExtResource("17_c8a2m")]
 transform = Transform3D(-0.9, 0, 1.3589622e-07, 0, 0.9, 0, -1.3589622e-07, 0, -0.9, 7.452219, 4.5928774, 8.6978855)

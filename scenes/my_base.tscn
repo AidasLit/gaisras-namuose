@@ -1,10 +1,12 @@
-[gd_scene load_steps=18 format=3 uid="uid://c6emy0isr77oa"]
+[gd_scene load_steps=24 format=3 uid="uid://c6emy0isr77oa"]
 
 [ext_resource type="PackedScene" uid="uid://qbmx03iibuuu" path="res://addons/godot-xr-tools/staging/scene_base.tscn" id="1_2b7op"]
 [ext_resource type="Script" uid="uid://bp0n4fm33xdfk" path="res://scenes/my_base.gd" id="2_c4hl7"]
 [ext_resource type="Script" uid="uid://bpmodm04r80w6" path="res://addons/godot-xr-tools/functions/movement_direct.gd" id="2_wwvrp"]
 [ext_resource type="Script" uid="uid://ciq6xarlvw2hj" path="res://addons/godot-xr-tools/functions/function_pickup.gd" id="3_c4hl7"]
+[ext_resource type="Shader" uid="uid://b5tnx1p5f0xmu" path="res://resources/heat.gdshader" id="3_wmdd0"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="4_6woui"]
+[ext_resource type="Script" uid="uid://cyb3hmjfnfep5" path="res://Scripts/heat.gd" id="4_raqsb"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="5_skk58"]
 [ext_resource type="PackedScene" uid="uid://xe8wd5yp6qqf" path="res://scenes/interfaces/wrist_ui.tscn" id="5_wwvrp"]
 [ext_resource type="Script" uid="uid://iyw6scisivrv" path="res://addons/godot-xr-tools/player/player_body.gd" id="6_wmdd0"]
@@ -13,6 +15,17 @@
 [ext_resource type="Material" path="res://addons/godot-xr-tools/materials/pointer.tres" id="8_skk58"]
 [ext_resource type="Material" path="res://addons/godot-xr-tools/materials/target.tres" id="9_wmdd0"]
 [ext_resource type="Script" uid="uid://bp6uhl01ho6ds" path="res://Scripts/gameflow.gd" id="12_wwvrp"]
+[ext_resource type="AudioStream" uid="uid://spqv101kig57" path="res://assets/Garsai/Level win sound effect(HD).mp3" id="14_6woui"]
+[ext_resource type="AudioStream" uid="uid://dtsh38wfhpq6i" path="res://assets/Garsai/marimba-lose-250960.mp3" id="15_skk58"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_skk58"]
+flip_faces = true
+size = Vector2(2, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_raqsb"]
+render_priority = 0
+shader = ExtResource("3_wmdd0")
+shader_parameter/strength = 0.0
 
 [sub_resource type="Resource" id="Resource_ljivr"]
 script = ExtResource("7_raqsb")
@@ -39,6 +52,12 @@ fog_depth_end = 30.0
 
 [node name="MyBase" instance=ExtResource("1_2b7op")]
 script = ExtResource("2_c4hl7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" index="0" groups=["heat_vfx"]]
+extra_cull_margin = 100.0
+mesh = SubResource("QuadMesh_skk58")
+surface_material_override/0 = SubResource("ShaderMaterial_raqsb")
+script = ExtResource("4_raqsb")
 
 [node name="Walking" type="Node" parent="XROrigin3D/LeftHand" index="0" groups=["movement_providers"]]
 script = ExtResource("2_wwvrp")
@@ -72,7 +91,7 @@ target_material = ExtResource("9_wmdd0")
 
 [node name="XRToolsPlayerBody" type="CharacterBody3D" parent="XROrigin3D" index="3" groups=["player_body"]]
 top_level = true
-collision_layer = 524289
+collision_layer = 524321
 script = ExtResource("6_wmdd0")
 physics = SubResource("Resource_ljivr")
 metadata/_custom_type_script = "uid://iyw6scisivrv"
@@ -85,5 +104,12 @@ environment = SubResource("Environment_6hthj")
 
 [node name="GameFlow" type="Node" parent="." index="3"]
 script = ExtResource("12_wwvrp")
+
+[node name="WinSound" type="AudioStreamPlayer" parent="GameFlow" index="0"]
+stream = ExtResource("14_6woui")
+volume_db = -10.0
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="GameFlow" index="1"]
+stream = ExtResource("15_skk58")
 
 [node name="Spawn" type="Marker3D" parent="." index="4"]

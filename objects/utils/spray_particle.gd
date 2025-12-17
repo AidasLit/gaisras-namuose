@@ -35,8 +35,8 @@ func _on_area_entered(area):
 func on_fire_collide():
 	timer.start(timer.time_left + 3.0)
 	
-	collision_shape_3d.free()
-	mesh_instance_3d.free()
+	collision_shape_3d.queue_free()
+	mesh_instance_3d.queue_free()
 	hit_box.queue_free()
 	
 	gpu_particles_3d.global_position = self.global_position

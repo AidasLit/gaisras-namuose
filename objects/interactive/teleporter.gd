@@ -24,16 +24,16 @@ func _on_body_entered(body : Node3D):
 	# Ignore if not enabled
 	if not enabled:
 		return
-
+	
 	# Skip if it wasn't the player entering
 	if not body.is_in_group("player_body"):
 		return
-
+	
 	# Find our scene base
 	var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
 	if not scene_base:
 		return
-
+	
 	# Fire the load_scene signal
 	if zone_scene == "":
 		scene_base.reset_scene(spawn_node_name)

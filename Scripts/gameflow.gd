@@ -3,6 +3,9 @@ class_name GameFlow
 
 const home_scene : String = "uid://dr3kqc5vp636u"
 
+@onready var win_sound: AudioStreamPlayer = $WinSound
+@onready var lose_sound: AudioStreamPlayer = $LoseSound
+
 enum LevelType{
 	None = 0,
 	ClearFire = 1,
@@ -27,11 +30,8 @@ const objectives = [
 
 var state = LevelState.None
 var objective : String
-var stasis_fires : int = 0
 
-func _ready() -> void:
-	#Performance.add_custom_monitor("test", func() -> int: return stasis_fires)
-	
+func _ready() -> void:	
 	SignalBus.level_failed.connect(func():
 		change_state(LevelState.Failed)
 	)
@@ -52,7 +52,6 @@ func _ready() -> void:
 
 func fires_update():
 	var fires = get_tree().get_nodes_in_group("fire")
-	#stasis_fires = fires.filter(func(item): return item.was_recently_hit).size()
 	if fires.is_empty():
 		change_state(LevelState.Finished)
 	else:
@@ -72,6 +71,11 @@ func objects_update():
 	SignalBus.flow_update.emit()
 
 func change_state(new_state: LevelState):
+	if state == new_state:
+		return
+	
+	state = new_state
+	
 	SignalBus.state_change.emit()
 	
 	match new_state:
@@ -87,6 +91,8 @@ func change_state(new_state: LevelState):
 			if not scene_base:
 				push_error("Failed to find scene base")
 			
+			win_sound.play()
+			
 			await get_tree().create_timer(5.0).timeout
 			
 			scene_base.load_scene(home_scene)
@@ -97,6 +103,8 @@ func change_state(new_state: LevelState):
 			var scene_base : XRToolsSceneBase = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
 			if not scene_base:
 				push_error("Failed to find scene base")
+			
+			lose_sound.play()
 			
 			await get_tree().create_timer(5.0).timeout
 			

@@ -58,6 +58,7 @@ player_body=""
 fire=""
 spray=""
 rescue_targets=""
+heat_vfx=""
 
 [input]
 
